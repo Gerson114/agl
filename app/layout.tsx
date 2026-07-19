@@ -29,18 +29,20 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-RHNQF6D79Z"
-        strategy="afterInteractive"
-      />
-      <Script id="gtag-init" strategy="afterInteractive">
-        {`window.dataLayer = window.dataLayer || [];
+      <head>
+        <Script
+          id="gtag-lib"
+          src="https://www.googletagmanager.com/gtag/js?id=G-RHNQF6D79Z"
+          strategy="beforeInteractive"
+        />
+        <Script id="gtag-init" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);} 
 gtag('js', new Date());
 
 gtag('config', 'G-RHNQF6D79Z');`}
-      </Script>
+        </Script>
+      </head>
 
       <body className="min-h-full flex flex-col">
         <Header />
