@@ -155,10 +155,7 @@ export default function Header() {
                         }`}
                         style={{ fontFamily: FONT_DISPLAY }}
                     >
-                        Planner
-                        <span className="text-[#1E5BFB] group-hover:text-[#0B1120] transition-colors">
-                            Agency
-                        </span>
+                        AGL Digital
                     </span>
                 </Link>
 
