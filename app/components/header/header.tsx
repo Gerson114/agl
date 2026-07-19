@@ -156,14 +156,7 @@ export default function Header() {
                             className="rounded-full object-cover"
                         />
                     </span>
-                    <span
-                        className={`font-bold tracking-tight text-[#0B1120] transition-all duration-300 ${
-                            rolado ? "text-lg" : "text-xl"
-                        }`}
-                        style={{ fontFamily: FONT_DISPLAY }}
-                    >
-                        AGL Digital
-                    </span>
+                    {/* logo text removed — only image shown */}
                 </Link>
 
                 {/* Navegação */}
