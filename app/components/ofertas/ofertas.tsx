@@ -34,6 +34,8 @@ const servicos: Servico[] = [
         condicoes: {
             pagamento: "Pagamento facilitado: 50% no início e 50% na entrega.",
             bonus: [
+                "Domínio grátis no 1º ano",
+                "Otimização de SEO inclusa",
                 "3 meses de hospedagem grátis",
                 "3 meses de manutenção grátis (ajustes de textos e imagens)",
             ],
@@ -53,9 +55,9 @@ const servicos: Servico[] = [
             pagamento: "Pagamento facilitado: 50% no início e 50% na entrega.",
             bonus: [
                 "Domínio grátis no 1º ano",
+                "Otimização de SEO nas páginas",
                 "6 meses de hospedagem grátis",
                 "1 mês de manutenção grátis (ajustes de textos e imagens)",
-                "Otimização básica de SEO nas páginas",
             ],
         },
         linkSlug: "#contato",

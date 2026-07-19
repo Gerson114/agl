@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
+import Image from "next/image";
 import { FaWhatsapp, FaBolt, FaBars, FaTimes } from "react-icons/fa";
 
 const FONT_DISPLAY = "'Space Grotesk', sans-serif";
@@ -147,7 +148,13 @@ export default function Header() {
                             rolado ? "w-7 h-7" : "w-9 h-9"
                         }`}
                     >
-                        <FaBolt className={`transition-all duration-300 ${rolado ? "text-xs" : "text-sm"}`} />
+                        <Image
+                            src="/ChatGPT Image 19 de jul. de 2026, 17_15_59.png"
+                            alt="AGL Digital"
+                            width={32}
+                            height={32}
+                            className="rounded-full object-cover"
+                        />
                     </span>
                     <span
                         className={`font-bold tracking-tight text-[#0B1120] transition-all duration-300 ${
