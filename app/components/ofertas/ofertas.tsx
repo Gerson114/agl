@@ -311,9 +311,7 @@ export default function Oferta(): ReactElement {
                     Não sabe qual escolher? Nós te ajudamos.
                 </p>
                 <a
-                    href="https://wa.me/55" // Complete com seu número (DDI + DDD + número)
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/#contato"
                     className="inline-flex items-center gap-3 bg-[#0B1120] hover:bg-slate-800 text-white font-semibold text-base px-10 py-4 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto justify-center"
                     style={{ fontFamily: FONT_BODY }}
                 >

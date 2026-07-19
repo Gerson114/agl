@@ -18,7 +18,7 @@ export default function Footer() {
                 </nav>
 
                 <div className="flex items-center gap-3">
-                    <a href="https://wa.me/55" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white">
+                    <a href="/#contato" className="text-white/80 hover:text-white">
                         <FaWhatsapp />
                     </a>
                     <a href="#" className="text-white/80 hover:text-white">
