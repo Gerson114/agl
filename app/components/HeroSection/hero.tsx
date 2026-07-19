@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollLink from "./ScrollLink";
 import banner from "../../../public/HS_Full_Bleed_1_optmised.webp";
 
 const FONT_DISPLAY = "'Bricolage Grotesque', sans-serif";
@@ -8,7 +9,7 @@ export default function Hero() {
     return (
         <div
             id="top"
-            className="relative w-full h-[560px] sm:h-[600px] md:h-125 lg:h-160 overflow-hidden"
+            className="relative w-full h-140 sm:h-150 md:h-125 lg:h-160 overflow-hidden"
         >
             <style>{`
                 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
@@ -24,7 +25,7 @@ export default function Hero() {
             />
 
             {/* Gradiente vertical (mobile): reforça contraste embaixo, onde fica o texto */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/15 md:hidden" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/55 to-black/15 md:hidden" />
 
             {/* Gradiente horizontal (desktop): escuro na esquerda, some na direita */}
             <div className="absolute inset-0 hidden md:block bg-linear-to-r from-black/85 via-black/50 to-black/10" />
@@ -51,29 +52,29 @@ export default function Hero() {
                         <div className="mt-5 w-16 h-1.5 rounded-full bg-[#1E5BFB]" />
 
                         <p
-                            className="mt-5 text-base sm:text-lg text-slate-200 max-w-[34rem] leading-relaxed"
+                            className="mt-5 text-base sm:text-lg text-slate-200 max-w-136 leading-relaxed"
                             style={{ fontFamily: FONT_BODY }}
                         >
                             Mais leads, mais vendas, mais crescimento.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-4">
-                            <a
-                                href="/#contato"
+                            <ScrollLink
+                                href="#contato"
                                 className="inline-flex items-center justify-center py-3.5 px-9 rounded-lg bg-[#1E5BFB] text-sm sm:text-base font-semibold text-white shadow-[0_8px_0_0_#0B1120] hover:shadow-[0_4px_0_0_#0B1120] hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all duration-150 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#1E5BFB] focus:ring-offset-2 focus:ring-offset-black"
                                 style={{ fontFamily: FONT_BODY }}
                             >
                                 Solicitar Orçamento
-                            </a>
+                            </ScrollLink>
 
-                            <a
-                                href="/#como-funciona"
+                            <ScrollLink
+                                href="#como-funciona"
                                 className="inline-flex items-center justify-center py-3.5 px-9 rounded-lg border border-white/50 text-sm sm:text-base font-semibold text-white hover:bg-white/10 hover:border-white transition-colors duration-200 ease-in-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/40"
                                 style={{ fontFamily: FONT_BODY }}
                             >
                                 Saiba Mais
-                            </a>
-                        </div>
+                            </ScrollLink>
+                        </div>    
                     </div>
                 </div>
             </div>
