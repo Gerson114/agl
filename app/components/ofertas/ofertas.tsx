@@ -1,4 +1,4 @@
-import { FaRocket, FaCode, FaWhatsapp } from "react-icons/fa";
+import { FaRocket, FaCode, FaWhatsapp, FaChartLine } from "react-icons/fa";
 import { HiCheckCircle } from "react-icons/hi";
 import type { ComponentType, ReactElement } from "react";
 
@@ -12,6 +12,7 @@ interface Servico {
     descricao: string;
     preco: string;
     prefixoPreco: string;
+    sufixoPreco?: string;
     url: string;
     destaque: boolean;
     condicoes: {
@@ -47,7 +48,7 @@ const servicos: Servico[] = [
         titulo: "Site Institucional Completo",
         descricao:
             "Presença digital robusta com múltiplas páginas para passar autoridade, apresentar sua empresa, serviços e canais de contato.",
-        preco: "1.000,00",
+        preco: "800,00",
         prefixoPreco: "a partir de R$",
         url: "suaempresa.com.br",
         destaque: false,
@@ -62,10 +63,29 @@ const servicos: Servico[] = [
         },
         linkSlug: "#contato",
     },
+    {
+        icone: FaChartLine,
+        titulo: "Rastreamento com Google Analytics",
+        descricao:
+            "Monitoramento básico do seu site: quantas pessoas visitam, de onde vêm e quais páginas mais acessam. Ideal para quem quer começar a tomar decisões com dados.",
+        preco: "50",
+        prefixoPreco: "plano mensal",
+        sufixoPreco: "/mês",
+        url: "analytics.seusite.com.br",
+        destaque: false,
+        condicoes: {
+            pagamento: "Cobrança mensal recorrente, sem fidelidade — cancele quando quiser.",
+            bonus: [
+                "Configuração completa do Google Analytics",
+                "Painel de visitantes e origem de tráfego",
+                "Relatório mensal de desempenho",
+                "Suporte via WhatsApp para dúvidas",
+            ],
+        },
+        linkSlug: "#contato",
+    },
 ];
 
-// Barra de navegador — o "cartão de visitas" visual de cada card,
-// reforçando que o que está à venda é, literalmente, um endereço na web.
 // Barra de navegador — o "cartão de visitas" visual de cada card,
 // reforçando que o que está à venda é, literalmente, um endereço na web.
 interface BarraNavegadorProps {
@@ -76,7 +96,7 @@ interface BarraNavegadorProps {
 function BarraNavegador({ destaque, url }: BarraNavegadorProps) {
     return (
         <div
-            className={`flex items-center gap-3 px-5 py-3 border-b ${
+            className={`flex items-center gap-2 px-4 py-2 border-b ${
                 destaque
                     ? "bg-[#10182B] border-white/10"
                     : "bg-slate-50 border-slate-200"
@@ -126,7 +146,7 @@ function CardServico({ s }: CardServicoProps) {
         <div className="relative h-full">
             {s.destaque && (
                 <span
-                    className="absolute -top-3.5 right-8 z-10 text-xs font-semibold uppercase tracking-wider bg-white text-[#1E5BFB] px-4 py-1.5 rounded-full shadow-md border border-blue-100"
+                    className="absolute -top-3 right-6 z-10 text-[10px] font-semibold uppercase tracking-wider bg-white text-[#1E5BFB] px-3 py-1 rounded-full shadow-md border border-blue-100"
                     style={{ fontFamily: FONT_MONO }}
                 >
                     Mais popular
@@ -143,22 +163,22 @@ function CardServico({ s }: CardServicoProps) {
             >
                 <BarraNavegador destaque={s.destaque} url={s.url} />
 
-                <div className="flex flex-col gap-8 p-8 sm:p-10 flex-1">
+                <div className="flex flex-col gap-4 p-5 sm:p-6 flex-1">
                     {/* Ícone */}
                     <div
-                        className={`flex items-center justify-center w-14 h-14 rounded-2xl transition-colors duration-300 ${
+                        className={`flex items-center justify-center w-9 h-9 rounded-lg transition-colors duration-300 ${
                             s.destaque
                                 ? "bg-white/15"
                                 : "bg-[#1E5BFB]/10 group-hover:bg-[#1E5BFB]/15"
                         }`}
                     >
-                        <Icone className={`text-2xl ${s.destaque ? "text-white" : "text-[#1E5BFB]"}`} />
+                        <Icone className={`text-base ${s.destaque ? "text-white" : "text-[#1E5BFB]"}`} />
                     </div>
 
                     {/* Título e descrição */}
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-1.5">
                         <h3
-                            className={`text-2xl font-bold tracking-tight ${
+                            className={`text-lg font-bold tracking-tight ${
                                 s.destaque ? "text-white" : "text-[#0B1120]"
                             }`}
                             style={{ fontFamily: FONT_DISPLAY }}
@@ -166,7 +186,7 @@ function CardServico({ s }: CardServicoProps) {
                             {s.titulo}
                         </h3>
                         <p
-                            className={`text-base leading-relaxed ${
+                            className={`text-xs leading-relaxed ${
                                 s.destaque ? "text-white/90" : "text-slate-600"
                             }`}
                             style={{ fontFamily: FONT_BODY }}
@@ -178,12 +198,12 @@ function CardServico({ s }: CardServicoProps) {
                     {/* Condições e bônus */}
                     {s.condicoes && (
                         <div
-                            className={`flex flex-col gap-4 p-5 rounded-xl ${
+                            className={`flex flex-col gap-2 p-3 rounded-lg ${
                                 s.destaque ? "bg-white/10" : "bg-slate-50 border border-slate-100"
                             }`}
                         >
                             <p
-                                className={`text-sm font-semibold ${
+                                className={`text-[11px] font-semibold ${
                                     s.destaque ? "text-white" : "text-slate-800"
                                 }`}
                                 style={{ fontFamily: FONT_BODY }}
@@ -192,16 +212,16 @@ function CardServico({ s }: CardServicoProps) {
                             </p>
 
                             {bonus && bonus.length > 0 && (
-                                <ul className="space-y-2.5">
+                                <ul className="space-y-1">
                                     {bonus.map((item, index) => (
-                                        <li key={index} className="flex items-start gap-2.5">
+                                        <li key={index} className="flex items-start gap-1.5">
                                             <HiCheckCircle
-                                                className={`w-5 h-5 mt-0.5 shrink-0 ${
+                                                className={`w-3.5 h-3.5 mt-0.5 shrink-0 ${
                                                     s.destaque ? "text-emerald-300" : "text-emerald-600"
                                                 }`}
                                             />
                                             <span
-                                                className={`text-sm ${
+                                                className={`text-[11px] ${
                                                     s.destaque ? "text-blue-50" : "text-slate-700"
                                                 }`}
                                                 style={{ fontFamily: FONT_BODY }}
@@ -217,12 +237,12 @@ function CardServico({ s }: CardServicoProps) {
 
                     {/* Preço */}
                     <div
-                        className={`mt-auto pt-7 border-t ${
+                        className={`mt-auto pt-3 border-t ${
                             s.destaque ? "border-white/15" : "border-slate-100"
                         }`}
                     >
                         <span
-                            className={`text-xs uppercase tracking-wider block mb-1.5 font-semibold ${
+                            className={`text-[10px] uppercase tracking-wider block mb-0.5 font-semibold ${
                                 s.destaque ? "text-blue-100" : "text-slate-400"
                             }`}
                             style={{ fontFamily: FONT_MONO }}
@@ -230,18 +250,27 @@ function CardServico({ s }: CardServicoProps) {
                             {s.prefixoPreco}
                         </span>
                         <span
-                            className={`text-4xl font-semibold tracking-tight ${
+                            className={`text-2xl font-semibold tracking-tight ${
                                 s.destaque ? "text-white" : "text-[#1E5BFB]"
                             }`}
                             style={{ fontFamily: FONT_MONO }}
                         >
                             R$ {s.preco}
+                            {s.sufixoPreco && (
+                                <span
+                                    className={`text-base font-medium ml-1 ${
+                                        s.destaque ? "text-blue-100" : "text-slate-400"
+                                    }`}
+                                >
+                                    {s.sufixoPreco}
+                                </span>
+                            )}
                         </span>
                     </div>
 
                     {/* CTA visual */}
                     <div
-                        className={`text-sm font-semibold flex items-center gap-2 transition-colors duration-200 ${
+                        className={`text-xs font-semibold flex items-center gap-1.5 transition-colors duration-200 ${
                             s.destaque
                                 ? "text-white/90 group-hover:text-white"
                                 : "text-[#1E5BFB] group-hover:text-blue-700"
@@ -250,7 +279,7 @@ function CardServico({ s }: CardServicoProps) {
                     >
                         Saber mais sobre este modelo
                         <svg
-                            className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-200"
+                            className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-200"
                             fill="none"
                             stroke="currentColor"
                             strokeWidth={2}
@@ -271,13 +300,13 @@ export default function Oferta(): ReactElement {
         // não ocupar a tela toda, o padding está vindo de um <div> pai (layout/App)
         // que envolve esta section com container/px-*. Deixe o pai sem padding
         // horizontal e controle o respiro só internamente (max-w-5xl mx-auto abaixo).
-        <section id="solucoes" className="w-full py-20 px-4 bg-[#F5F6FA]">
+        <section id="solucoes" className="w-full py-14 px-4 bg-[#F5F6FA]">
             <style>{`
                 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap');
             `}</style>
 
             {/* Header */}
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
                 <span
                     className="inline-block text-[#1E5BFB] text-sm font-semibold uppercase tracking-widest mb-3"
                     style={{ fontFamily: FONT_MONO }}
@@ -301,14 +330,14 @@ export default function Oferta(): ReactElement {
             </div>
 
             {/* Grid de cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
                 {servicos.map((s) => (
                     <CardServico key={s.titulo} s={s} />
                 ))}
             </div>
 
             {/* CTA final */}
-            <div className="mt-20 text-center">
+            <div className="mt-12 text-center">
                 <p className="text-slate-500 mb-6 text-sm" style={{ fontFamily: FONT_BODY }}>
                     Não sabe qual escolher? Nós te ajudamos.
                 </p>

@@ -7,7 +7,7 @@ const FONT_BODY = "'Inter', sans-serif";
 
 export default function Hero() {
     return (
-        <section
+        <div
             id="top"
             aria-labelledby="hero-title"
             className="relative w-full h-140 sm:h-150 md:h-125 lg:h-160 overflow-hidden"
@@ -82,6 +82,6 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }
