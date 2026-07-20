@@ -2,29 +2,31 @@
 
 import React from "react";
 
+type ScrollLinkProps = React.PropsWithChildren<
+  Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
+    href: string;
+  }
+>;
+
 export default function ScrollLink({
   href,
   children,
-  className,
-  style,
-}: React.PropsWithChildren<{ href: string; className?: string; style?: React.CSSProperties }>) {
-  function handleClick(e: React.MouseEvent) {
-    // if it's an anchor to an id on the same page, smooth scroll
+  ...props
+}: ScrollLinkProps) {
+  function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
     if (href.startsWith("#")) {
       e.preventDefault();
       const id = href.slice(1);
       const el = document.getElementById(id);
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
-        // update hash without jumping
         history.replaceState(null, "", `#${id}`);
       }
     }
-    // otherwise let the browser handle it (external links will navigate)
   }
 
   return (
-    <a href={href} onClick={handleClick} className={className} style={style}>
+    <a href={href} onClick={handleClick} {...props}>
       {children}
     </a>
   );

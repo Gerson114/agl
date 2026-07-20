@@ -9,7 +9,7 @@ export default function Footer() {
                     <p className="text-sm text-white/80 mt-1">Ajudamos sua marca a crescer online.</p>
                 </div>
 
-                <nav className="flex flex-wrap justify-center gap-4">
+                <nav aria-label="Links do rodapé" className="flex flex-wrap justify-center gap-4">
                     <a href="/#top" className="text-sm text-white/80 hover:text-white">Home</a>
                     <a href="/#como-funciona" className="text-sm text-white/80 hover:text-white">Como Funciona</a>
                     <a href="/#solucoes" className="text-sm text-white/80 hover:text-white">Soluções</a>
@@ -18,7 +18,7 @@ export default function Footer() {
                 </nav>
 
                 <div className="flex items-center gap-3">
-                    <a href="/#contato" className="text-white/80 hover:text-white">
+                    <a id="btn-whatsapp-footer" href="/#contato" className="text-white/80 hover:text-white">
                         <FaWhatsapp />
                     </a>
                     <a href="#" className="text-white/80 hover:text-white">

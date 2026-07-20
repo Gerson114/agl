@@ -50,6 +50,7 @@ function MenuMobile({
                         Menu
                     </span>
                     <button
+                        id="btn-fechar-menu"
                         type="button"
                         onClick={onFechar}
                         aria-label="Fechar menu"
@@ -60,18 +61,21 @@ function MenuMobile({
                 </div>
 
                 <div className="flex flex-col gap-2 px-4 pt-4 pb-6">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.href}
-                            href={link.href}
-                            onClick={onFechar}
-                            className="block rounded-xl px-4 py-3 text-[15px] font-medium text-slate-700 hover:bg-slate-100 hover:text-[#1E5BFB] transition-colors"
-                            style={{ fontFamily: FONT_BODY }}
-                        >
-                            {link.label}
-                        </a>
-                    ))}
+                    <nav aria-label="Menu móvel" className="flex flex-col gap-2">
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.href}
+                                href={link.href}
+                                onClick={onFechar}
+                                className="block rounded-xl px-4 py-3 text-[15px] font-medium text-slate-700 hover:bg-slate-100 hover:text-[#1E5BFB] transition-colors"
+                                style={{ fontFamily: FONT_BODY }}
+                            >
+                                {link.label}
+                            </a>
+                        ))}
+                    </nav>
                     <a
+                        id="btn-whatsapp-mobile"
                         href="#contato"
                         onClick={onFechar}
                         className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-linear-to-r from-[#1E5BFB] to-[#0B1120] px-4 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg transition-all"
@@ -167,7 +171,7 @@ export default function Header() {
                 </Link>
 
                 {/* Navegação */}
-                <nav className="hidden md:flex items-center gap-1">
+                <nav aria-label="Navegação principal" className="hidden md:flex items-center gap-1">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}
@@ -183,6 +187,7 @@ export default function Header() {
 
                 <div className="flex items-center gap-3">
                     <button
+                        id="btn-toggle-menu"
                         type="button"
                         onClick={() => setMenuAberto((prev) => !prev)}
                         aria-expanded={menuAberto}
@@ -193,6 +198,7 @@ export default function Header() {
                     </button>
 
                     <a
+                        id="btn-whatsapp-header"
                         href="#contato"
                         className={`hidden md:inline-flex items-center gap-2 bg-linear-to-r from-[#1E5BFB] to-[#0B1120] hover:from-[#1a4fe0] hover:to-[#060a16] text-white font-semibold text-sm rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 ${
                             rolado ? "px-4 py-2" : "px-5 py-2.5"

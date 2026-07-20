@@ -7,8 +7,9 @@ const FONT_BODY = "'Inter', sans-serif";
 
 export default function Hero() {
     return (
-        <div
+        <section
             id="top"
+            aria-labelledby="hero-title"
             className="relative w-full h-140 sm:h-150 md:h-125 lg:h-160 overflow-hidden"
         >
             <style>{`
@@ -41,6 +42,7 @@ export default function Hero() {
                         </span>
 
                         <h1
+                            id="hero-title"
                             className="font-bold text-3xl leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl tracking-tight"
                             style={{ fontFamily: FONT_DISPLAY }}
                         >
@@ -58,8 +60,9 @@ export default function Hero() {
                             Mais leads, mais vendas, mais crescimento.
                         </p>
 
-                        <div className="mt-8 flex flex-wrap gap-4">
+                        <div id="orcamento" className="mt-8 flex flex-wrap gap-4">
                             <ScrollLink
+                                id="btn-solicitar-orcamento"
                                 href="#contato"
                                 className="inline-flex items-center justify-center py-3.5 px-9 rounded-lg bg-[#1E5BFB] text-sm sm:text-base font-semibold text-white shadow-[0_8px_0_0_#0B1120] hover:shadow-[0_4px_0_0_#0B1120] hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all duration-150 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#1E5BFB] focus:ring-offset-2 focus:ring-offset-black"
                                 style={{ fontFamily: FONT_BODY }}
@@ -68,6 +71,7 @@ export default function Hero() {
                             </ScrollLink>
 
                             <ScrollLink
+                                id="btn-saiba-mais"
                                 href="#como-funciona"
                                 className="inline-flex items-center justify-center py-3.5 px-9 rounded-lg border border-white/50 text-sm sm:text-base font-semibold text-white hover:bg-white/10 hover:border-white transition-colors duration-200 ease-in-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/40"
                                 style={{ fontFamily: FONT_BODY }}
@@ -78,6 +82,6 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
