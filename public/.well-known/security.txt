@@ -1,0 +1,4 @@
+Contact: contato@agl.gersonback.uk
+Expires: 2027-07-20T00:00:00.000Z
+Preferred-Languages: pt-BR, en
+Canonical: https://agl.gersonback.uk/.well-known/security.txt

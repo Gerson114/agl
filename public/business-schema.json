@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-ld.org/schema",
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "AGL Digital",
+  "description": "Agência de marketing digital especializada em SEO, gestão de redes sociais e estratégias digitais",
+  "url": "https://agl.gersonback.uk",
+  "logo": "https://agl.gersonback.uk/logo.png",
+  "image": "https://agl.gersonback.uk/og-image.png",
+  "telephone": "+55-81-98358-3549",
+  "email": "contato@agl.gersonback.uk",
+  "priceRange": "R$ 500 - R$ 5000+",
+  "areaServed": {
+    "@type": "Country",
+    "name": "BR"
+  },
+  "sameAs": [
+    "https://www.facebook.com/agldigital",
+    "https://www.instagram.com/agldigital",
+    "https://www.linkedin.com/company/agldigital",
+    "https://twitter.com/agldigital"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "BR",
+    "addressLocality": "Recife",
+    "addressRegion": "PE"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "telephone": "+55-81-98358-3549",
+    "email": "contato@agl.gersonback.uk",
+    "availableLanguage": ["pt-BR", "en"]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "1"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "BRL",
+    "lowPrice": "500",
+    "highPrice": "5000",
+    "offerCount": "3"
+  }
+}
