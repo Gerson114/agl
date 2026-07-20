@@ -5,8 +5,8 @@ export default function Footer() {
         <footer className="bg-[#0B1120] text-white py-10 px-4">
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="text-center md:text-left">
-                    <h3 className="text-lg font-bold">PlannerAgency</h3>
-                    <p className="text-sm text-white/80 mt-1">Ajudamos sua marca a crescer online.</p>
+                    <h3 className="text-lg font-bold">AGL Digital</h3>
+                    <p className="text-sm text-white/80 mt-1">Agência de marketing digital especializada em SEO e vendas online.</p>
                 </div>
 
                 <nav aria-label="Links do rodapé" className="flex flex-wrap justify-center gap-4">
@@ -31,7 +31,7 @@ export default function Footer() {
             </div>
 
             <div className="max-w-5xl mx-auto mt-8 text-center text-white/60 text-sm">
-                © {new Date().getFullYear()} PlannerAgency. Todos os direitos reservados.
+                © {new Date().getFullYear()} AGL Digital. Todos os direitos reservados.
             </div>
         </footer>
     );
