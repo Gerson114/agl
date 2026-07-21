@@ -2,23 +2,23 @@
   "$schema": "https://json-ld.org/schema",
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "AGL Digital",
+  "name": "Mevi",
   "description": "Agência de marketing digital especializada em SEO, gestão de redes sociais e estratégias digitais",
-  "url": "https://agl.gersonback.uk",
-  "logo": "https://agl.gersonback.uk/logo.png",
-  "image": "https://agl.gersonback.uk/og-image.png",
+  "url": "https://mevi.gersonback.uk",
+  "logo": "https://mevi.gersonback.uk/logo.png",
+  "image": "https://mevi.gersonback.uk/og-image.png",
   "telephone": "+55-81-98358-3549",
-  "email": "contato@agl.gersonback.uk",
+  "email": "contato@mevi.gersonback.uk",
   "priceRange": "R$ 500 - R$ 5000+",
   "areaServed": {
     "@type": "Country",
     "name": "BR"
   },
   "sameAs": [
-    "https://www.facebook.com/agldigital",
-    "https://www.instagram.com/agldigital",
-    "https://www.linkedin.com/company/agldigital",
-    "https://twitter.com/agldigital"
+    "https://www.facebook.com/mevidigital",
+    "https://www.instagram.com/mevidigital",
+    "https://www.linkedin.com/company/mevidigital",
+    "https://twitter.com/mevidigital"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -30,7 +30,7 @@
     "@type": "ContactPoint",
     "contactType": "Customer Service",
     "telephone": "+55-81-98358-3549",
-    "email": "contato@agl.gersonback.uk",
+    "email": "contato@mevi.gersonback.uk",
     "availableLanguage": ["pt-BR", "en"]
   },
   "aggregateRating": {

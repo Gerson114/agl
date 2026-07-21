@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Script from "next/script";
 import Image from "next/image";
 import Header from "./components/header/header";
@@ -10,9 +10,9 @@ import Funciona from "./components/funciona/page";
 import Contato from "./components/contato/contato";
 
 export const metadata: Metadata = {
-  title: "Criar Landing Page Profissional | Agência Web AGL Digital",
+  title: "Criar Landing Page Profissional | Agência Web Mevi",
   description:
-    "Crie seu site de vendas com a AGL Digital. Desenvolvemos landing pages de alta conversão, websites institucionais e sites profissionais otimizados para SEO. Mais leads e vendas garantidas!",
+    "Crie seu site de vendas com a Mevi. Desenvolvemos landing pages de alta conversão, websites institucionais e sites profissionais otimizados para SEO. Mais leads e vendas garantidas!",
   keywords: [
     "criar site profissional",
     "vender site",
@@ -31,12 +31,12 @@ export default function Home() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "AGL Digital",
+    "name": "Mevi",
     "description":
       "Agência especializada em criar landing pages de alta conversão e websites profissionais otimizados para vendas e SEO",
-    "url": "https://agl.gersonback.uk",
+    "url": "https://mevi.gersonback.uk",
     "telephone": "+5581983583549",
-    "email": "contato@agl.gersonback.uk",
+    "email": "contato@mevi.gersonback.uk",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "BR",
@@ -68,9 +68,9 @@ export default function Home() {
       ],
     },
     "sameAs": [
-      "https://www.facebook.com/agldigital",
-      "https://www.instagram.com/agldigital",
-      "https://www.linkedin.com/company/agldigital",
+      "https://www.facebook.com/mevidigital",
+      "https://www.instagram.com/mevidigital",
+      "https://www.linkedin.com/company/mevidigital",
     ],
   };
 

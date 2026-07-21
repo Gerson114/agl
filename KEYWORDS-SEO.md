@@ -3,10 +3,10 @@
 ## ✅ Implementadas no Seu Site
 
 ### Título Principal
-✨ **"Criar Landing Page Profissional | Agência Web AGL Digital"**
+✨ **"Criar Landing Page Profissional | Agência Web Mevi"**
 
 ### Meta Description
-✨ **"Crie seu site de vendas com a AGL Digital. Desenvolvemos landing pages de alta conversão, websites institucionais e sites profissionais otimizados para SEO. Mais leads e vendas garantidas!"**
+✨ **"Crie seu site de vendas com a Mevi. Desenvolvemos landing pages de alta conversão, websites institucionais e sites profissionais otimizados para SEO. Mais leads e vendas garantidas!"**
 
 ---
 
@@ -223,7 +223,7 @@ Links sugeridos:
 ## 💡 Dicas Extras
 
 ### 1. Título Meta Perfeito
-✅ **Criar Landing Page Profissional | Agência Web AGL Digital**
+✅ **Criar Landing Page Profissional | Agência Web Mevi**
 - Começa com ação
 - Menção de benefício
 - Marca no final

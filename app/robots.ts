@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/', '/.next/', '/private/'],
       },
     ],
-    sitemap: 'https://agl.gersonback.uk/sitemap.xml',
-    host: 'https://agl.gersonback.uk',
+    sitemap: 'https://mevi.gersonback.uk/sitemap.xml',
+    host: 'https://mevi.gersonback.uk',
   }
 }

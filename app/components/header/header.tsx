@@ -78,7 +78,7 @@ function MenuMobile({
                         id="btn-whatsapp-mobile"
                         href="#contato"
                         onClick={onFechar}
-                        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-linear-to-r from-[#1E5BFB] to-[#0B1120] px-4 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg transition-all"
+                        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-linear-to-r from-[#4C0086] to-[#000000] px-4 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg transition-all"
                         style={{ fontFamily: FONT_BODY }}
                     >
                         <FaWhatsapp className="text-base" />
@@ -153,21 +153,21 @@ export default function Header() {
                         }`}
                     >
                         <Image
-                            src="/ChatGPT Image 19 de jul. de 2026, 17_15_59.png"
-                            alt="AGL Digital"
+                            src="/logo.jpeg"
+                            alt="Mevi"
                             width={32}
                             height={32}
                             className="rounded-full object-cover"
                         />
                     </span>
-                    <span
-                        className={`font-bold tracking-tight text-[#0B1120] transition-all duration-300 ${
-                            rolado ? "text-lg" : "text-xl"
-                        }`}
-                        style={{ fontFamily: FONT_DISPLAY }}
-                    >
-                        AGL Digital
-                    </span>
+                  <span
+    className={`font-bold tracking-tight text-[#0B1120] transition-all duration-300 ${
+        rolado ? "text-lg" : "text-xl"
+    }`}
+    style={{ fontFamily: FONT_DISPLAY }}
+>
+    Mevi
+</span>
                 </Link>
 
                 {/* Navegação */}
@@ -200,7 +200,7 @@ export default function Header() {
                     <a
                         id="btn-whatsapp-header"
                         href="#contato"
-                        className={`hidden md:inline-flex items-center gap-2 bg-linear-to-r from-[#1E5BFB] to-[#0B1120] hover:from-[#1a4fe0] hover:to-[#060a16] text-white font-semibold text-sm rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 ${
+                        className={`hidden md:inline-flex items-center gap-2 bg-linear-to-r from-[#4C0086] to-black hover:from-[#3a0066] hover:to-[#050505] text-white font-semibold text-sm rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 ${
                             rolado ? "px-4 py-2" : "px-5 py-2.5"
                         }`}
                         style={{ fontFamily: FONT_BODY }}
