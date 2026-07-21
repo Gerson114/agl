@@ -50,18 +50,18 @@ export default function Contato() {
             <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-12">
                     <span
-                        className="inline-block text-[#1E5BFB] text-sm font-semibold uppercase tracking-widest mb-3"
+                        className="inline-block text-[#4E018D] text-sm font-semibold uppercase tracking-widest mb-3"
                         style={{ fontFamily: FONT_MONO }}
                     >
                         &lt;Fale com a gente /&gt;
                     </span>
                     <h2
-                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0B1120] tracking-tight leading-tight"
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight leading-tight"
                         style={{ fontFamily: FONT_DISPLAY }}
                     >
                         Vamos tirar seu site do papel
                     </h2>
-                    <div className="mt-5 mx-auto w-16 h-1.5 rounded-full bg-[#1E5BFB]" />
+                    <div className="mt-5 mx-auto w-16 h-1.5 rounded-full bg-[#4E018D]" />
                     <p
                         className="mt-6 text-slate-600 text-lg leading-relaxed"
                         style={{ fontFamily: FONT_BODY }}
@@ -79,12 +79,12 @@ export default function Contato() {
                     <div className="flex flex-col gap-2">
                         <label
                             htmlFor="nome"
-                            className="text-sm font-semibold text-[#0B1120]"
+                            className="text-sm font-semibold text-black"
                             style={{ fontFamily: FONT_BODY }}
                         >
                             Nome
                         </label>
-                        <div className="flex items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 focus-within:border-[#1E5BFB] transition-colors">
+                        <div className="flex items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 focus-within:border-[#4E018D] transition-colors">
                             <FaUser className="text-slate-400 shrink-0" />
                             <input
                                 id="nome"
@@ -102,12 +102,12 @@ export default function Contato() {
                     <div className="flex flex-col gap-2">
                         <label
                             htmlFor="telefone"
-                            className="text-sm font-semibold text-[#0B1120]"
+                            className="text-sm font-semibold text-black"
                             style={{ fontFamily: FONT_BODY }}
                         >
                             Telefone / WhatsApp
                         </label>
-                        <div className="flex items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 focus-within:border-[#1E5BFB] transition-colors">
+                        <div className="flex items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 focus-within:border-[#4E018D] transition-colors">
                             <FaPhone className="text-slate-400 shrink-0" />
                             <input
                                 id="telefone"
@@ -125,7 +125,7 @@ export default function Contato() {
                     <div className="flex flex-col gap-2">
                         <label
                             htmlFor="servico"
-                            className="text-sm font-semibold text-[#0B1120]"
+                            className="text-sm font-semibold text-black"
                             style={{ fontFamily: FONT_BODY }}
                         >
                             Serviço de interesse
@@ -135,7 +135,7 @@ export default function Contato() {
                                 id="servico"
                                 value={servico}
                                 onChange={(e) => setServico(e.target.value)}
-                                className="w-full appearance-none rounded-xl border border-slate-200 px-4 py-3 pr-10 outline-none text-slate-800 focus:border-[#1E5BFB] transition-colors bg-white"
+                                className="w-full appearance-none rounded-xl border border-slate-200 px-4 py-3 pr-10 outline-none text-slate-800 focus:border-[#4E018D] transition-colors bg-white"
                                 style={{ fontFamily: FONT_BODY }}
                             >
                                 {servicos.map((s) => (
@@ -152,12 +152,12 @@ export default function Contato() {
                     <div className="flex flex-col gap-2">
                         <label
                             htmlFor="mensagem"
-                            className="text-sm font-semibold text-[#0B1120]"
+                            className="text-sm font-semibold text-black"
                             style={{ fontFamily: FONT_BODY }}
                         >
                             Mensagem <span className="text-slate-400 font-normal">(opcional)</span>
                         </label>
-                        <div className="flex items-start gap-3 rounded-xl border border-slate-200 px-4 py-3 focus-within:border-[#1E5BFB] transition-colors">
+                        <div className="flex items-start gap-3 rounded-xl border border-slate-200 px-4 py-3 focus-within:border-[#4E018D] transition-colors">
                             <FaCommentDots className="text-slate-400 shrink-0 mt-1" />
                             <textarea
                                 id="mensagem"

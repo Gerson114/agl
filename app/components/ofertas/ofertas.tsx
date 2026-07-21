@@ -146,7 +146,7 @@ function CardServico({ s }: CardServicoProps) {
         <div className="relative h-full">
             {s.destaque && (
                 <span
-                    className="absolute -top-3 right-6 z-10 text-[10px] font-semibold uppercase tracking-wider bg-white text-[#1E5BFB] px-3 py-1 rounded-full shadow-md border border-blue-100"
+                    className="absolute -top-3 right-6 z-10 text-[10px] font-semibold uppercase tracking-wider bg-white text-[#4E018D] px-3 py-1 rounded-full shadow-md border border-purple-100"
                     style={{ fontFamily: FONT_MONO }}
                 >
                     Mais popular
@@ -157,8 +157,8 @@ function CardServico({ s }: CardServicoProps) {
                 href={s.linkSlug}
                 className={`group relative flex flex-col h-full rounded-2xl overflow-hidden border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer ${
                     s.destaque
-                        ? "bg-[#1E5BFB] border-[#1E5BFB] text-white shadow-xl shadow-blue-200/60"
-                        : "bg-white border-slate-200 text-slate-800 shadow-sm hover:border-blue-200"
+                        ? "bg-[#4E018D] border-[#4E018D] text-white shadow-xl shadow-purple-900/20"
+                        : "bg-white border-slate-200 text-slate-800 shadow-sm hover:border-purple-200"
                 }`}
             >
                 <BarraNavegador destaque={s.destaque} url={s.url} />
@@ -169,17 +169,17 @@ function CardServico({ s }: CardServicoProps) {
                         className={`flex items-center justify-center w-9 h-9 rounded-lg transition-colors duration-300 ${
                             s.destaque
                                 ? "bg-white/15"
-                                : "bg-[#1E5BFB]/10 group-hover:bg-[#1E5BFB]/15"
+                                : "bg-[#4E018D]/10 group-hover:bg-[#4E018D]/15"
                         }`}
                     >
-                        <Icone className={`text-base ${s.destaque ? "text-white" : "text-[#1E5BFB]"}`} />
+                        <Icone className={`text-base ${s.destaque ? "text-white" : "text-[#4E018D]"}`} />
                     </div>
 
                     {/* Título e descrição */}
                     <div className="flex flex-col gap-1.5">
                         <h3
                             className={`text-lg font-bold tracking-tight ${
-                                s.destaque ? "text-white" : "text-[#0B1120]"
+                                s.destaque ? "text-white" : "text-black"
                             }`}
                             style={{ fontFamily: FONT_DISPLAY }}
                         >
@@ -222,7 +222,7 @@ function CardServico({ s }: CardServicoProps) {
                                             />
                                             <span
                                                 className={`text-[11px] ${
-                                                    s.destaque ? "text-blue-50" : "text-slate-700"
+                                                    s.destaque ? "text-purple-50" : "text-slate-700"
                                                 }`}
                                                 style={{ fontFamily: FONT_BODY }}
                                             >
@@ -243,7 +243,7 @@ function CardServico({ s }: CardServicoProps) {
                     >
                         <span
                             className={`text-[10px] uppercase tracking-wider block mb-0.5 font-semibold ${
-                                s.destaque ? "text-blue-100" : "text-slate-400"
+                                s.destaque ? "text-purple-100" : "text-slate-400"
                             }`}
                             style={{ fontFamily: FONT_MONO }}
                         >
@@ -251,7 +251,7 @@ function CardServico({ s }: CardServicoProps) {
                         </span>
                         <span
                             className={`text-2xl font-semibold tracking-tight ${
-                                s.destaque ? "text-white" : "text-[#1E5BFB]"
+                                s.destaque ? "text-white" : "text-[#4E018D]"
                             }`}
                             style={{ fontFamily: FONT_MONO }}
                         >
@@ -259,7 +259,7 @@ function CardServico({ s }: CardServicoProps) {
                             {s.sufixoPreco && (
                                 <span
                                     className={`text-base font-medium ml-1 ${
-                                        s.destaque ? "text-blue-100" : "text-slate-400"
+                                        s.destaque ? "text-purple-100" : "text-slate-400"
                                     }`}
                                 >
                                     {s.sufixoPreco}
@@ -273,7 +273,7 @@ function CardServico({ s }: CardServicoProps) {
                         className={`text-xs font-semibold flex items-center gap-1.5 transition-colors duration-200 ${
                             s.destaque
                                 ? "text-white/90 group-hover:text-white"
-                                : "text-[#1E5BFB] group-hover:text-blue-700"
+                                : "text-[#4E018D] group-hover:text-purple-700"
                         }`}
                         style={{ fontFamily: FONT_BODY }}
                     >
@@ -308,18 +308,18 @@ export default function Oferta(): ReactElement {
             {/* Header */}
             <div className="text-center mb-10">
                 <span
-                    className="inline-block text-[#1E5BFB] text-sm font-semibold uppercase tracking-widest mb-3"
+                    className="inline-block text-[#4E018D] text-sm font-semibold uppercase tracking-widest mb-3"
                     style={{ fontFamily: FONT_MONO }}
                 >
                     &lt;Nossas Soluções Web /&gt;
                 </span>
                 <h2
-                    className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0B1120] tracking-tight leading-tight max-w-2xl mx-auto"
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight leading-tight max-w-2xl mx-auto"
                     style={{ fontFamily: FONT_DISPLAY }}
                 >
                     Escolha a melhor opção para o seu negócio
                 </h2>
-                <div className="mt-5 mx-auto w-16 h-1.5 rounded-full bg-[#1E5BFB]" />
+                <div className="mt-5 mx-auto w-16 h-1.5 rounded-full bg-[#4E018D]" />
                 <p
                     className="mt-6 text-slate-600 text-lg max-w-xl mx-auto leading-relaxed"
                     style={{ fontFamily: FONT_BODY }}
@@ -343,7 +343,7 @@ export default function Oferta(): ReactElement {
                 </p>
                 <a
                     href="/#contato"
-                    className="inline-flex items-center gap-3 bg-[#0B1120] hover:bg-slate-800 text-white font-semibold text-base px-10 py-4 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto justify-center"
+                    className="inline-flex items-center gap-3 bg-black hover:bg-zinc-900 text-white font-semibold text-base px-10 py-4 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto justify-center"
                     style={{ fontFamily: FONT_BODY }}
                 >
                     <FaWhatsapp className="text-xl text-emerald-400" />

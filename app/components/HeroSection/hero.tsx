@@ -51,7 +51,7 @@ export default function Hero() {
                             às pessoas certas
                         </h1>
 
-                        <div className="mt-5 w-16 h-1.5 rounded-full bg-[#1E5BFB]" />
+                        <div className="mt-5 w-16 h-1.5 rounded-full bg-[#4E018D]" />
 
                         <p
                             className="mt-5 text-base sm:text-lg text-slate-200 max-w-136 leading-relaxed"
@@ -64,7 +64,7 @@ export default function Hero() {
                             <ScrollLink
                                 id="btn-solicitar-orcamento"
                                 href="#contato"
-                                className="inline-flex items-center justify-center py-3.5 px-9 rounded-lg bg-[#1E5BFB] text-sm sm:text-base font-semibold text-white shadow-[0_8px_0_0_#0B1120] hover:shadow-[0_4px_0_0_#0B1120] hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all duration-150 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#1E5BFB] focus:ring-offset-2 focus:ring-offset-black"
+                                className="inline-flex items-center justify-center py-3.5 px-9 rounded-lg bg-[#4E018D] text-sm sm:text-base font-semibold text-white shadow-[0_8px_0_0_#000000] hover:shadow-[0_4px_0_0_#000000] hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all duration-150 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#4E018D] focus:ring-offset-2 focus:ring-offset-black"
                                 style={{ fontFamily: FONT_BODY }}
                             >
                                 Solicitar Orçamento

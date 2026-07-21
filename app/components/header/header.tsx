@@ -67,7 +67,7 @@ function MenuMobile({
                                 key={link.href}
                                 href={link.href}
                                 onClick={onFechar}
-                                className="block rounded-xl px-4 py-3 text-[15px] font-medium text-slate-700 hover:bg-slate-100 hover:text-[#1E5BFB] transition-colors"
+                                className="block rounded-xl px-4 py-3 text-[15px] font-medium text-slate-700 hover:bg-slate-100 hover:text-[#4E018D] transition-colors"
                                 style={{ fontFamily: FONT_BODY }}
                             >
                                 {link.label}
@@ -78,7 +78,7 @@ function MenuMobile({
                         id="btn-whatsapp-mobile"
                         href="#contato"
                         onClick={onFechar}
-                        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-linear-to-r from-[#4C0086] to-[#000000] px-4 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg transition-all"
+                        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-linear-to-r from-[#4E018D] to-[#000000] px-4 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg transition-all"
                         style={{ fontFamily: FONT_BODY }}
                     >
                         <FaWhatsapp className="text-base" />
@@ -148,7 +148,7 @@ export default function Header() {
                 {/* Logo */}
                 <Link href="#top" className="flex items-center gap-2.5 group">
                     <span
-                        className={`flex items-center justify-center rounded-xl bg-linear-to-br from-[#1E5BFB] to-[#0B1120] text-white shadow-md shadow-blue-200 group-hover:shadow-blue-300 transition-all duration-300 ${
+                        className={`flex items-center justify-center rounded-xl bg-linear-to-br from-[#4E018D] to-black text-white shadow-md shadow-[#4E018D]/20 group-hover:shadow-[#4E018D]/30 transition-all duration-300 ${
                             rolado ? "w-7 h-7" : "w-9 h-9"
                         }`}
                     >
@@ -161,7 +161,7 @@ export default function Header() {
                         />
                     </span>
                   <span
-    className={`font-bold tracking-tight text-[#0B1120] transition-all duration-300 ${
+    className={`font-bold tracking-tight text-black transition-all duration-300 ${
         rolado ? "text-lg" : "text-xl"
     }`}
     style={{ fontFamily: FONT_DISPLAY }}
@@ -176,11 +176,11 @@ export default function Header() {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className="relative px-4 py-2 text-[15px] font-medium text-slate-600 hover:text-[#1E5BFB] transition-colors rounded-lg hover:bg-blue-50 group"
+                            className="relative px-4 py-2 text-[15px] font-medium text-slate-600 hover:text-[#4E018D] transition-colors rounded-lg hover:bg-purple-50 group"
                             style={{ fontFamily: FONT_BODY }}
                         >
                             {link.label}
-                            <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#1E5BFB] scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
+                            <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#4E018D] scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
                         </Link>
                     ))}
                 </nav>
@@ -200,7 +200,7 @@ export default function Header() {
                     <a
                         id="btn-whatsapp-header"
                         href="#contato"
-                        className={`hidden md:inline-flex items-center gap-2 bg-linear-to-r from-[#4C0086] to-black hover:from-[#3a0066] hover:to-[#050505] text-white font-semibold text-sm rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 ${
+                        className={`hidden md:inline-flex items-center gap-2 bg-linear-to-r from-[#4E018D] to-black hover:from-[#3d0070] hover:to-[#050505] text-white font-semibold text-sm rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 ${
                             rolado ? "px-4 py-2" : "px-5 py-2.5"
                         }`}
                         style={{ fontFamily: FONT_BODY }}

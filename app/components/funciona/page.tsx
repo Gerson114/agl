@@ -60,7 +60,7 @@ function ItemAcordeao({
     return (
         <div
             className={`rounded-2xl border transition-colors duration-300 overflow-hidden ${
-                aberto ? "border-[#1E5BFB] bg-blue-50/40" : "border-slate-200 bg-white"
+                aberto ? "border-[#4E018D] bg-[#4E018D]/5" : "border-slate-200 bg-white"
             }`}
         >
             <button
@@ -72,7 +72,7 @@ function ItemAcordeao({
             >
                 <span
                     className={`shrink-0 text-xs font-semibold w-8 h-8 rounded-full flex items-center justify-center ${
-                        aberto ? "bg-[#1E5BFB] text-white" : "bg-slate-100 text-slate-500"
+                        aberto ? "bg-[#4E018D] text-white" : "bg-slate-100 text-slate-500"
                     }`}
                     style={{ fontFamily: FONT_MONO }}
                 >
@@ -81,15 +81,15 @@ function ItemAcordeao({
 
                 <span
                     className={`shrink-0 hidden sm:flex items-center justify-center w-10 h-10 rounded-xl ${
-                        aberto ? "bg-[#1E5BFB]/10" : "bg-slate-50"
+                        aberto ? "bg-[#4E018D]/10" : "bg-slate-50"
                     }`}
                 >
-                    <Icone className={`text-lg ${aberto ? "text-[#1E5BFB]" : "text-slate-400"}`} />
+                    <Icone className={`text-lg ${aberto ? "text-[#4E018D]" : "text-slate-400"}`} />
                 </span>
 
                 <span className="flex-1 min-w-0">
                     <span
-                        className="block text-base sm:text-lg font-semibold text-[#0B1120] tracking-tight"
+                        className="block text-base sm:text-lg font-semibold text-black tracking-tight"
                         style={{ fontFamily: FONT_DISPLAY }}
                     >
                         {etapa.titulo}
@@ -104,7 +104,7 @@ function ItemAcordeao({
 
                 <FaChevronDown
                     className={`shrink-0 text-slate-400 transition-transform duration-300 ${
-                        aberto ? "rotate-180 text-[#1E5BFB]" : ""
+                        aberto ? "rotate-180 text-[#4E018D]" : ""
                     }`}
                 />
             </button>
@@ -138,18 +138,18 @@ export default function Funciona() {
 
             <div className="text-center mb-14 max-w-2xl mx-auto">
                 <span
-                    className="inline-block text-[#1E5BFB] text-sm font-semibold uppercase tracking-widest mb-3"
+                    className="inline-block text-[#4E018D] text-sm font-semibold uppercase tracking-widest mb-3"
                     style={{ fontFamily: FONT_MONO }}
                 >
                     &lt;Como Funciona /&gt;
                 </span>
                 <h2
-                    className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0B1120] tracking-tight leading-tight"
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight leading-tight"
                     style={{ fontFamily: FONT_DISPLAY }}
                 >
                     Do seu site pronto até a hospedagem contínua
                 </h2>
-                <div className="mt-5 mx-auto w-16 h-1.5 rounded-full bg-[#1E5BFB]" />
+                <div className="mt-5 mx-auto w-16 h-1.5 rounded-full bg-[#4E018D]" />
                 <p
                     className="mt-6 text-slate-600 text-lg leading-relaxed"
                     style={{ fontFamily: FONT_BODY }}
