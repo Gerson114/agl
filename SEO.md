@@ -1,4 +1,4 @@
-# Guia Completo de SEO - Mevi 🚀
+# Guia Completo de SEO - AGL Digital 🚀
 
 ## ✅ Otimizações Implementadas
 

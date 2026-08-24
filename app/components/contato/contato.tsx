@@ -1,17 +1,27 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { FaUser, FaPhone, FaCommentDots, FaWhatsapp, FaChevronDown } from "react-icons/fa";
+import {
+    FaUser,
+    FaPhone,
+    FaCommentDots,
+    FaWhatsapp,
+    FaChevronDown,
+    FaEnvelope,
+    FaMapMarkerAlt,
+    FaClock,
+} from "react-icons/fa";
+import { NUMERO_WHATSAPP, servicos as servicosDisponiveis } from "../../data/servicos";
+import Reveal from "../ui/Reveal";
 
-const FONT_DISPLAY = "'Space Grotesk', sans-serif";
+const FONT_DISPLAY = "'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Inter', sans-serif";
 const FONT_MONO = "'JetBrains Mono', monospace";
 
-const NUMERO = "5581983583549"; // DDI + DDD + número, sem espaços ou símbolos
+const NUMERO = NUMERO_WHATSAPP;
 
 const servicos = [
-    "Landing Page de Alta Conversão",
-    "Site Institucional Completo",
+    ...servicosDisponiveis.map((s) => s.titulo),
     "Ainda não sei, quero uma indicação",
 ];
 
@@ -43,14 +53,10 @@ export default function Contato() {
 
     return (
         <section id="contato" className="w-full py-20 px-4 bg-[#F5F6FA]">
-            <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap');
-            `}</style>
-
-            <div className="max-w-3xl mx-auto">
-                <div className="text-center mb-12">
+            <div className="max-w-5xl mx-auto">
+                <Reveal className="text-center mb-12">
                     <span
-                        className="inline-block text-[#4E018D] text-sm font-semibold uppercase tracking-widest mb-3"
+                        className="inline-block text-[#0B3B8C] text-sm font-semibold uppercase tracking-widest mb-3"
                         style={{ fontFamily: FONT_MONO }}
                     >
                         &lt;Fale com a gente /&gt;
@@ -61,7 +67,7 @@ export default function Contato() {
                     >
                         Vamos tirar seu site do papel
                     </h2>
-                    <div className="mt-5 mx-auto w-16 h-1.5 rounded-full bg-[#4E018D]" />
+                    <div className="mt-5 mx-auto w-16 h-1.5 bg-[#0B3B8C]" />
                     <p
                         className="mt-6 text-slate-600 text-lg leading-relaxed"
                         style={{ fontFamily: FONT_BODY }}
@@ -69,11 +75,58 @@ export default function Contato() {
                         Preencha os dados abaixo e sua mensagem já chega prontinha no nosso
                         WhatsApp.
                     </p>
-                </div>
+                </Reveal>
 
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+                    <Reveal direction="left" className="lg:col-span-2 flex flex-col gap-4">
+                        <div className="border border-slate-200 bg-white p-6 flex flex-col gap-5">
+                            <h3
+                                className="text-sm font-bold text-black uppercase tracking-wide"
+                                style={{ fontFamily: FONT_DISPLAY }}
+                            >
+                                Contato direto
+                            </h3>
+
+                            <a
+                                href={`https://wa.me/${NUMERO}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-slate-700 hover:text-[#0B3B8C] transition-colors"
+                                style={{ fontFamily: FONT_BODY }}
+                            >
+                                <FaWhatsapp className="text-[#0B3B8C] shrink-0" />
+                                <span className="text-sm">(81) 98358-3549</span>
+                            </a>
+
+                            <a
+                                href="mailto:contato@agl.digital"
+                                className="flex items-center gap-3 text-slate-700 hover:text-[#0B3B8C] transition-colors"
+                                style={{ fontFamily: FONT_BODY }}
+                            >
+                                <FaEnvelope className="text-[#0B3B8C] shrink-0" />
+                                <span className="text-sm">contato@agl.digital</span>
+                            </a>
+
+                            <div className="flex items-center gap-3 text-slate-700">
+                                <FaMapMarkerAlt className="text-[#0B3B8C] shrink-0" />
+                                <span className="text-sm" style={{ fontFamily: FONT_BODY }}>
+                                    Recife, PE — atendimento para todo o Brasil
+                                </span>
+                            </div>
+
+                            <div className="flex items-center gap-3 text-slate-700">
+                                <FaClock className="text-[#0B3B8C] shrink-0" />
+                                <span className="text-sm" style={{ fontFamily: FONT_BODY }}>
+                                    Respondemos em até 1 dia útil
+                                </span>
+                            </div>
+                        </div>
+                    </Reveal>
+
+                <Reveal direction="right" delay={100} className="lg:col-span-3">
                 <form
                     onSubmit={handleSubmit}
-                    className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-10 flex flex-col gap-6"
+                    className="w-full bg-white border border-slate-200 shadow-sm p-6 sm:p-10 flex flex-col gap-6"
                 >
                     {/* Nome */}
                     <div className="flex flex-col gap-2">
@@ -84,7 +137,7 @@ export default function Contato() {
                         >
                             Nome
                         </label>
-                        <div className="flex items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 focus-within:border-[#4E018D] transition-colors">
+                        <div className="flex items-center gap-3 border border-slate-200 px-4 py-3 focus-within:border-[#0B3B8C] transition-colors">
                             <FaUser className="text-slate-400 shrink-0" />
                             <input
                                 id="nome"
@@ -107,7 +160,7 @@ export default function Contato() {
                         >
                             Telefone / WhatsApp
                         </label>
-                        <div className="flex items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 focus-within:border-[#4E018D] transition-colors">
+                        <div className="flex items-center gap-3 border border-slate-200 px-4 py-3 focus-within:border-[#0B3B8C] transition-colors">
                             <FaPhone className="text-slate-400 shrink-0" />
                             <input
                                 id="telefone"
@@ -135,7 +188,7 @@ export default function Contato() {
                                 id="servico"
                                 value={servico}
                                 onChange={(e) => setServico(e.target.value)}
-                                className="w-full appearance-none rounded-xl border border-slate-200 px-4 py-3 pr-10 outline-none text-slate-800 focus:border-[#4E018D] transition-colors bg-white"
+                                className="w-full appearance-none border border-slate-200 px-4 py-3 pr-10 outline-none text-slate-800 focus:border-[#0B3B8C] transition-colors bg-white"
                                 style={{ fontFamily: FONT_BODY }}
                             >
                                 {servicos.map((s) => (
@@ -157,7 +210,7 @@ export default function Contato() {
                         >
                             Mensagem <span className="text-slate-400 font-normal">(opcional)</span>
                         </label>
-                        <div className="flex items-start gap-3 rounded-xl border border-slate-200 px-4 py-3 focus-within:border-[#4E018D] transition-colors">
+                        <div className="flex items-start gap-3 border border-slate-200 px-4 py-3 focus-within:border-[#0B3B8C] transition-colors">
                             <FaCommentDots className="text-slate-400 shrink-0 mt-1" />
                             <textarea
                                 id="mensagem"
@@ -180,7 +233,7 @@ export default function Contato() {
                     <button
                         id="btn-enviar-whatsapp"
                         type="submit"
-                        className="mt-2 inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold text-base px-8 py-4 rounded-xl shadow-lg shadow-emerald-500/20 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 outline-none"
+                        className="mt-2 inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold text-base px-8 py-4 shadow-lg shadow-emerald-500/20 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 outline-none"
                         style={{ fontFamily: FONT_BODY }}
                     >
                         <FaWhatsapp className="text-xl" />
@@ -195,6 +248,8 @@ export default function Contato() {
                         preenchida.
                     </p>
                 </form>
+                </Reveal>
+                </div>
             </div>
         </section>
     );

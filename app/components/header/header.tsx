@@ -1,18 +1,28 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import Image from "next/image";
-import { FaWhatsapp, FaBolt, FaBars, FaTimes } from "react-icons/fa";
+import { FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
 
-const FONT_DISPLAY = "'Space Grotesk', sans-serif";
+const FONT_DISPLAY = "'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Inter', sans-serif";
 
-const NUMERO = "5581983583549"; // DDI + DDD + número, sem espaços ou símbolos
+function subscribeNoop() {
+    return () => {};
+}
+
+function getMontadoClient() {
+    return true;
+}
+
+function getMontadoServer() {
+    return false;
+}
 
 const navLinks = [
     { label: "Home", href: "#top" },
+    { label: "Sobre", href: "#sobre" },
     { label: "Como Funciona", href: "#como-funciona" },
     { label: "Soluções", href: "#solucoes" },
     { label: "Contato", href: "#contato" },
@@ -54,7 +64,7 @@ function MenuMobile({
                         type="button"
                         onClick={onFechar}
                         aria-label="Fechar menu"
-                        className="p-2 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors outline-none"
+                        className="p-2 bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors outline-none"
                     >
                         <FaTimes className="text-lg" />
                     </button>
@@ -67,23 +77,23 @@ function MenuMobile({
                                 key={link.href}
                                 href={link.href}
                                 onClick={onFechar}
-                                className="block rounded-xl px-4 py-3 text-[15px] font-medium text-slate-700 hover:bg-slate-100 hover:text-[#4E018D] transition-colors"
+                                className="block px-4 py-3 text-[15px] font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0B3B8C] transition-colors"
                                 style={{ fontFamily: FONT_BODY }}
                             >
                                 {link.label}
                             </a>
                         ))}
                     </nav>
-                    <a
+                    <Link
                         id="btn-whatsapp-mobile"
                         href="#contato"
                         onClick={onFechar}
-                        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-linear-to-r from-[#4E018D] to-[#000000] px-4 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg transition-all"
+                        className="mt-4 inline-flex w-full items-center justify-center gap-2 bg-[#0B3B8C] hover:bg-[#0A3277] px-4 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg transition-all"
                         style={{ fontFamily: FONT_BODY }}
                     >
                         <FaWhatsapp className="text-base" />
                         Falar no WhatsApp
-                    </a>
+                    </Link>
                 </div>
             </div>
         </>
@@ -93,11 +103,8 @@ function MenuMobile({
 export default function Header() {
     const [rolado, setRolado] = useState(false);
     const [menuAberto, setMenuAberto] = useState(false);
-    const [montado, setMontado] = useState(false);
-
-    useEffect(() => {
-        setMontado(true); // só temos "document.body" depois de montar no cliente
-    }, []);
+    // só temos "document.body" depois de montar no cliente
+    const montado = useSyncExternalStore(subscribeNoop, getMontadoClient, getMontadoServer);
 
     useEffect(() => {
         function handleScroll() {
@@ -136,51 +143,49 @@ export default function Header() {
                     : "bg-white/75 backdrop-blur-sm border-b border-transparent"
             }`}
         >
-            <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap');
-            `}</style>
-
             <div
                 className={`max-w-325 mx-auto flex items-center justify-between px-6 transition-all duration-300 ease-in-out ${
                     rolado ? "py-2.5" : "py-4"
                 }`}
             >
                 {/* Logo */}
-                <Link href="#top" className="flex items-center gap-2.5 group">
+                <Link href="/" className="flex items-center gap-2.5 group">
                     <span
-                        className={`flex items-center justify-center rounded-xl bg-linear-to-br from-[#4E018D] to-black text-white shadow-md shadow-[#4E018D]/20 group-hover:shadow-[#4E018D]/30 transition-all duration-300 ${
-                            rolado ? "w-7 h-7" : "w-9 h-9"
+                        aria-hidden="true"
+                        className={`flex items-center justify-center bg-linear-to-br from-[#0B3B8C] to-[#0A2F70] text-white shadow-md group-hover:shadow-lg group-hover:from-[#0A3277] group-hover:to-[#082458] transition-all duration-300 ${
+                            rolado ? "w-8 h-8" : "w-10 h-10"
                         }`}
                     >
-                        <Image
-                            src="/logo.jpeg"
-                            alt="Mevi"
-                            width={32}
-                            height={32}
-                            className="rounded-full object-cover"
-                        />
+                        <span
+                            className={`font-bold tracking-tight transition-all duration-300 ${
+                                rolado ? "text-[11px]" : "text-xs"
+                            }`}
+                            style={{ fontFamily: FONT_DISPLAY }}
+                        >
+                            AGL
+                        </span>
                     </span>
-                  <span
-    className={`font-bold tracking-tight text-black transition-all duration-300 ${
-        rolado ? "text-lg" : "text-xl"
-    }`}
-    style={{ fontFamily: FONT_DISPLAY }}
->
-    Mevi
-</span>
+                    <span
+                        className={`font-bold tracking-tight text-black transition-all duration-300 ${
+                            rolado ? "text-lg" : "text-xl"
+                        }`}
+                        style={{ fontFamily: FONT_DISPLAY }}
+                    >
+                        AGL Digital
+                    </span>
                 </Link>
 
                 {/* Navegação */}
-                <nav aria-label="Navegação principal" className="hidden md:flex items-center gap-1">
+                <nav aria-label="Navegação principal" className="hidden md:flex items-center gap-2">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}
                             href={link.href}
-                            className="relative px-4 py-2 text-[15px] font-medium text-slate-600 hover:text-[#4E018D] transition-colors rounded-lg hover:bg-purple-50 group"
+                            className="relative px-4 py-2 text-[15px] font-medium text-slate-600 hover:text-[#0B3B8C] transition-colors duration-200 hover:bg-blue-50/70 group"
                             style={{ fontFamily: FONT_BODY }}
                         >
                             {link.label}
-                            <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#4E018D] scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
+                            <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#0B3B8C] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                         </Link>
                     ))}
                 </nav>
@@ -192,22 +197,22 @@ export default function Header() {
                         onClick={() => setMenuAberto((prev) => !prev)}
                         aria-expanded={menuAberto}
                         aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
-                        className="md:hidden relative z-50 p-2 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors outline-none"
+                        className="md:hidden relative z-50 p-2 bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors outline-none"
                     >
                         {menuAberto ? <FaTimes className="text-lg" /> : <FaBars className="text-lg" />}
                     </button>
 
-                    <a
+                    <Link
                         id="btn-whatsapp-header"
                         href="#contato"
-                        className={`hidden md:inline-flex items-center gap-2 bg-linear-to-r from-[#4E018D] to-black hover:from-[#3d0070] hover:to-[#050505] text-white font-semibold text-sm rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 ${
+                        className={`hidden md:inline-flex items-center gap-2 bg-[#0B3B8C] hover:bg-[#0A3277] text-white font-semibold text-sm shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 ${
                             rolado ? "px-4 py-2" : "px-5 py-2.5"
                         }`}
                         style={{ fontFamily: FONT_BODY }}
                     >
                         <FaWhatsapp className="text-base" />
                         <span>Entre em contato</span>
-                    </a>
+                    </Link>
                 </div>
             </div>
 

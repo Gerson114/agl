@@ -1,27 +1,25 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import Image from "next/image";
-import Header from "./components/header/header";
 import Hero from "./components/HeroSection/hero";
-import Parceiros from "./components/parceiros/parceiro";
-import Footer from "./components/footer/footer";
-import Oferta from "./components/ofertas/ofertas";
+import Sobre from "./components/sobre/sobre";
 import Funciona from "./components/funciona/page";
+import Solucoes from "./components/solucoes/solucoes";
 import Contato from "./components/contato/contato";
 
 export const metadata: Metadata = {
-  title: "Criar Landing Page Profissional | Agência Web Mevi",
+  title: "Sistemas Personalizados e Landing Pages | AGL Digital",
   description:
-    "Crie seu site de vendas com a Mevi. Desenvolvemos landing pages de alta conversão, websites institucionais e sites profissionais otimizados para SEO. Mais leads e vendas garantidas!",
+    "Desenvolvemos sistemas web sob medida e landing pages de alta conversão. Software personalizado para o seu processo e páginas otimizadas para SEO. Mais eficiência e mais vendas!",
   keywords: [
-    "criar site profissional",
-    "vender site",
-    "agência web",
+    "sistema personalizado",
+    "desenvolvimento de sistemas sob medida",
+    "criar sistema web",
+    "software sob medida",
+    "automação de processos",
     "landing page de vendas",
     "website de alta conversão",
     "site responsivo",
     "desenvolvimento web",
-    "website otimizado",
     "criar landing page",
     "site com resultado",
   ],
@@ -31,12 +29,12 @@ export default function Home() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Mevi",
+    "name": "AGL Digital",
     "description":
-      "Agência especializada em criar landing pages de alta conversão e websites profissionais otimizados para vendas e SEO",
-    "url": "https://mevi.gersonback.uk",
+      "Empresa especializada em desenvolvimento de sistemas web personalizados e landing pages de alta conversão otimizadas para vendas e SEO",
+    "url": "https://agl.digital",
     "telephone": "+5581983583549",
-    "email": "contato@mevi.gersonback.uk",
+    "email": "contato@agl.digital",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "BR",
@@ -49,6 +47,13 @@ export default function Home() {
       "lowPrice": "500",
       "highPrice": "5000",
       "offers": [
+        {
+          "@type": "Offer",
+          "name": "Sistema Web Personalizado",
+          "description":
+            "Painéis, CRMs, automações e integrações desenvolvidos sob medida para o processo da sua empresa.",
+          "priceCurrency": "BRL",
+        },
         {
           "@type": "Offer",
           "name": "Landing Page de Alta Conversão",
@@ -68,26 +73,24 @@ export default function Home() {
       ],
     },
     "sameAs": [
-      "https://www.facebook.com/mevidigital",
-      "https://www.instagram.com/mevidigital",
-      "https://www.linkedin.com/company/mevidigital",
+      "https://www.facebook.com/agldigital",
+      "https://www.instagram.com/agldigital",
+      "https://www.linkedin.com/company/agldigital",
     ],
   };
 
   return (
     <>
       <Script
+        id="schema-local-business"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
-      <Header />
-      <main className="pt-24" role="main">
-        <Hero />
-        <Funciona />
-        <Oferta />
-        <Contato />
-        <Footer />
-      </main>
+      <Hero />
+      <Sobre />
+      <Funciona />
+      <Solucoes />
+      <Contato />
     </>
   );
 }

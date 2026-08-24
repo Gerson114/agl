@@ -1,7 +1,7 @@
 {
-  "name": "Mevi - Agência de Marketing Digital",
-  "short_name": "Mevi",
-  "description": "Agência de marketing digital especializada em SEO, gestão de redes sociais e estratégias digitais",
+  "name": "AGL Digital - Sistemas Personalizados e Landing Pages",
+  "short_name": "AGL Digital",
+  "description": "Desenvolvimento de sistemas web sob medida e landing pages de alta conversão",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -53,13 +53,5 @@
       "form_factor": "wide"
     }
   ],
-  "categories": ["business", "productivity"],
-  "screenshots": [
-    {
-      "src": "/screenshot1.png",
-      "sizes": "540x720",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ]
+  "categories": ["business", "productivity"]
 }
