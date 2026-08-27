@@ -7,6 +7,7 @@ import {
     FaGift,
     FaCreditCard,
     FaGlobe,
+    FaKey,
 } from "react-icons/fa";
 import Reveal from "../ui/Reveal";
 
@@ -34,17 +35,24 @@ const gruposEtapas = [
             },
             {
                 icone: FaCreditCard,
-                titulo: "Depois dos 2 meses: R$ 60/mês, se você quiser continuar com a gente",
+                titulo: "Depois dos 2 meses: R$ 100/mês, se você quiser continuar com a gente",
                 resumo: "Só paga quem decide ficar hospedado conosco.",
                 conteudo:
-                    "Passado esse período, se você quiser manter a hospedagem com a gente, o investimento passa a ser de R$ 60,00 por mês. Se preferir migrar para outro provedor, pode levar o sistema — ele é seu.",
+                    "Passado esse período, se você quiser manter a hospedagem com a gente, o investimento passa a ser de R$ 100,00 por mês. Se preferir migrar para outro provedor, pode levar o sistema — ele é seu.",
             },
             {
                 icone: FaGlobe,
                 titulo: "O que está incluso nesse valor mensal",
-                resumo: "Manutenção e alterações inclusas.",
+                resumo: "Manutenção, vitrine e lógica nova inclusas.",
                 conteudo:
-                    "Ficando com a gente, a mensalidade já cobre manutenção de rotina e alterações no sistema (ajustes, pequenos updates e novas funcionalidades), sem cobranças extras por fora.",
+                    "Ficando com a gente, a mensalidade de R$ 100,00 já cobre manutenção de rotina, alterações no design da vitrine e implementação de lógica nova (novas funcionalidades e regras de negócio do sistema), sem cobranças extras por fora.",
+            },
+            {
+                icone: FaKey,
+                titulo: "Não quer comprar? Você pode alugar o sistema",
+                resumo: "Mesmo valor de R$ 100/mês, só que sem comprar.",
+                conteudo:
+                    "Se preferir não comprar, dá para alugar o sistema pelo mesmo valor de R$ 100,00 por mês. Nesse plano a manutenção continua inclusa e você pode pedir alterações na vitrine, mas não tem direito a alterações de lógica (regras internas do sistema) — só quem compra o sistema tem esse direito.",
             },
         ],
     },
@@ -136,8 +144,27 @@ function ItemAcordeao({
 export default function Funciona() {
     const [aberto, setAberto] = useState<string | null>("0-0");
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: gruposEtapas.flatMap((grupo) =>
+            grupo.itens.map((etapa) => ({
+                "@type": "Question",
+                name: etapa.titulo,
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: etapa.conteudo,
+                },
+            }))
+        ),
+    };
+
     return (
         <section id="como-funciona" className="w-full py-20 px-4 bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <Reveal className="text-center mb-14 max-w-2xl mx-auto">
                 <span
                     className="inline-block text-[#0B3B8C] text-sm font-semibold uppercase tracking-widest mb-3"

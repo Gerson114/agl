@@ -10,9 +10,13 @@ export default function Hero() {
         <div
             id="top"
             aria-labelledby="hero-title"
-            className="relative w-full h-140 sm:h-150 md:h-125 lg:h-160 overflow-hidden -mt-24"
+            className="relative w-full h-140 sm:h-150 md:h-125 lg:h-160 overflow-hidden"
         >
-            <div className="absolute inset-0 hero-zoom">
+            {/* A imagem se estende pra cima (top: -6rem) pra ficar visível atrás do header fixo/transparente,
+                sem puxar o texto (que fica no bloco abaixo, sem esse deslocamento) para debaixo do menu.
+                Offset via inline style (não via classe utilitária) porque o valor precisa bater exatamente
+                com a altura do header/pt-24 do <main>, independente da escala de spacing do Tailwind. */}
+            <div className="absolute inset-x-0 bottom-0 hero-zoom" style={{ top: "-6rem" }}>
                 <Image
                     src={banner}
                     alt="Equipe trabalhando em estratégias de marketing digital"

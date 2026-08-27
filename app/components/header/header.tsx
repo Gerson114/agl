@@ -23,6 +23,7 @@ function getMontadoServer() {
 const navLinks = [
     { label: "Home", href: "#top" },
     { label: "Sobre", href: "#sobre" },
+    { label: "Demonstração", href: "#demonstracao" },
     { label: "Como Funciona", href: "#como-funciona" },
     { label: "Soluções", href: "#solucoes" },
     { label: "Contato", href: "#contato" },

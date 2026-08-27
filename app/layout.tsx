@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: "Sistemas Personalizados e Landing Pages | AGL Digital",
   description:
-    "Desenvolvemos sistemas web sob medida (painéis, CRMs, automações) e landing pages de alta conversão. Software personalizado para o seu processo e páginas otimizadas para vender.",
+    "Sistemas web sob medida (painéis, CRMs, automações) e landing pages de alta conversão, feitos para o seu processo e para vender mais.",
   keywords: [
     "sistema personalizado",
     "desenvolvimento de sistemas sob medida",
@@ -39,6 +39,10 @@ export const metadata: Metadata = {
     "software sob medida",
     "automação de processos",
     "painel administrativo personalizado",
+    "criação de sistemas",
+    "criação de sistemas web",
+    "empresa de criação de sistemas",
+    "criação de sistemas personalizados",
     "criar landing page",
     "landing page de vendas",
     "website de alta conversão",
@@ -79,7 +83,7 @@ export const metadata: Metadata = {
     siteName: "AGL Digital",
     images: [
       {
-        url: `${baseUrl}/og-image.png`,
+        url: `${baseUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "AGL Digital - Sistemas Personalizados e Landing Pages",
@@ -88,10 +92,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@agldigital",
+    creator: "@agldigital",
     title: "Sistemas Personalizados e Landing Pages | AGL Digital",
     description:
       "Sistemas web sob medida e landing pages de alta conversão para o seu negócio.",
-    images: [`${baseUrl}/twitter-image.png`],
+    images: [`${baseUrl}/twitter-image.jpg`],
   },
 };
 
@@ -158,6 +164,50 @@ export default function RootLayout({
                 telephone: "+55-81-98358-3549",
                 email: "contato@agl.digital",
                 availableLanguage: ["pt-BR", "en"],
+              },
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Serviços AGL Digital",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    priceCurrency: "BRL",
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      minPrice: 500,
+                      maxPrice: 5000,
+                      priceCurrency: "BRL",
+                    },
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Criação de Sistemas Web Personalizados",
+                      description:
+                        "Criação de sistemas web sob medida: painéis, CRMs, automações e integrações desenvolvidos para o processo da sua empresa.",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    price: "500",
+                    priceCurrency: "BRL",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Landing Page de Alta Conversão",
+                      description:
+                        "Página única ultra-otimizada para transformar visitantes em clientes. Perfeita para campanhas de tráfego pago.",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    price: "800",
+                    priceCurrency: "BRL",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Site Institucional Completo",
+                      description:
+                        "Presença digital robusta com múltiplas páginas para passar autoridade e apresentar sua empresa.",
+                    },
+                  },
+                ],
               },
             }),
           }}

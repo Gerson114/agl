@@ -26,7 +26,7 @@ export const servicos: Servico[] = [
         icone: FaLaptopCode,
         titulo: "Sistema Web Personalizado",
         descricao:
-            "Painéis administrativos, CRMs, automações e integrações desenvolvidos sob medida para o processo da sua empresa — nada de sistema genérico.",
+            "Criação de sistemas sob medida: painéis administrativos, CRMs, automações e integrações desenvolvidos para o processo da sua empresa — nada de sistema genérico.",
         preco: "",
         prefixoPreco: "investimento",
         sobConsulta: true,

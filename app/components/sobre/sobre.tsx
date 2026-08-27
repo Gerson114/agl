@@ -15,9 +15,9 @@ interface Pilar {
 const pilares: Pilar[] = [
     {
         icone: FaLaptopCode,
-        titulo: "Sistemas sob medida",
+        titulo: "Criação de sistemas sob medida",
         descricao:
-            "Painéis, CRMs, automações e integrações desenhados a partir do seu processo real — não um pacote genérico adaptado às pressas.",
+            "Criação de sistemas web: painéis, CRMs, automações e integrações desenhados a partir do seu processo real — não um pacote genérico adaptado às pressas.",
     },
     {
         icone: FaRocket,

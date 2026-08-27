@@ -13,6 +13,7 @@ export default function Footer() {
                 <nav aria-label="Links do rodapé" className="flex flex-wrap justify-center gap-4">
                     <Link href="#top" className="text-sm text-white/80 hover:text-white">Home</Link>
                     <Link href="#sobre" className="text-sm text-white/80 hover:text-white">Sobre</Link>
+                    <Link href="#demonstracao" className="text-sm text-white/80 hover:text-white">Demonstração</Link>
                     <Link href="#como-funciona" className="text-sm text-white/80 hover:text-white">Como Funciona</Link>
                     <Link href="#solucoes" className="text-sm text-white/80 hover:text-white">Soluções</Link>
                     <Link href="#contato" className="text-sm text-white/80 hover:text-white">Contato</Link>
