@@ -2,6 +2,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { HiCheckCircle } from "react-icons/hi";
 import { servicos, NUMERO_WHATSAPP } from "../../data/servicos";
 import Reveal from "../ui/Reveal";
+import Eyebrow from "../ui/Eyebrow";
 
 const FONT_DISPLAY = "'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Inter', sans-serif";
@@ -12,24 +13,20 @@ function linkWhatsapp(titulo: string) {
     return `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(texto)}`;
 }
 
-export default function Solucoes() {
+export default function Solucoes({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" } = {}) {
+    const Heading = headingLevel;
     return (
         <section id="solucoes" className="w-full bg-white">
             <div className="w-full py-14 px-4 bg-[#F5F6FA] border-b border-slate-200">
                 <Reveal className="max-w-3xl mx-auto text-center">
-                    <span
-                        className="inline-block text-[#0B3B8C] text-sm font-semibold uppercase tracking-widest mb-3"
-                        style={{ fontFamily: FONT_MONO }}
-                    >
-                        &lt;Opções para o seu projeto /&gt;
-                    </span>
-                    <h2
+                    <Eyebrow>Opções para o seu projeto</Eyebrow>
+                    <Heading
                         className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight leading-tight"
                         style={{ fontFamily: FONT_DISPLAY }}
                     >
                         Qual dessas opções é a cara do seu negócio?
-                    </h2>
-                    <div className="mt-5 mx-auto w-16 h-1.5 bg-[#0B3B8C]" />
+                    </Heading>
+                    <div className="mt-5 mx-auto w-16 h-1.5 bg-[#1D4FE0]" />
                     <p
                         className="mt-6 text-slate-600 text-lg leading-relaxed"
                         style={{ fontFamily: FONT_BODY }}
@@ -50,7 +47,7 @@ export default function Solucoes() {
                             <Reveal key={s.titulo} delay={index * 100} className="relative h-full">
                                 {s.badge && (
                                     <span
-                                        className="absolute -top-3 right-6 z-10 text-[10px] font-semibold uppercase tracking-wider bg-white text-[#0B3B8C] px-3 py-1 shadow-md border border-blue-100"
+                                        className="absolute -top-3 right-6 z-10 text-[10px] font-semibold uppercase tracking-wider bg-white text-[#1D4FE0] px-3 py-1 shadow-md border border-blue-100"
                                         style={{ fontFamily: FONT_MONO }}
                                     >
                                         {s.badge}
@@ -60,7 +57,7 @@ export default function Solucoes() {
                                 <div
                                     className={`group relative flex flex-col h-full overflow-hidden border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
                                         s.destaque
-                                            ? "bg-[#0B3B8C] border-[#0B3B8C] text-white shadow-xl shadow-blue-900/20"
+                                            ? "bg-[#1D4FE0] border-[#1D4FE0] text-white shadow-xl shadow-blue-900/20"
                                             : "bg-white border-slate-200 text-slate-800 shadow-sm hover:border-blue-200"
                                     }`}
                                 >
@@ -69,11 +66,11 @@ export default function Solucoes() {
                                             className={`flex items-center justify-center w-9 h-9 transition-colors duration-300 ${
                                                 s.destaque
                                                     ? "bg-white/15"
-                                                    : "bg-[#0B3B8C]/10 group-hover:bg-[#0B3B8C]/15"
+                                                    : "bg-[#1D4FE0]/10 group-hover:bg-[#1D4FE0]/15"
                                             }`}
                                         >
                                             <Icone
-                                                className={`text-base ${s.destaque ? "text-white" : "text-[#0B3B8C]"}`}
+                                                className={`text-base ${s.destaque ? "text-white" : "text-[#1D4FE0]"}`}
                                             />
                                         </div>
 
@@ -150,7 +147,7 @@ export default function Solucoes() {
                                             </span>
                                             <span
                                                 className={`text-2xl font-semibold tracking-tight ${
-                                                    s.destaque ? "text-white" : "text-[#0B3B8C]"
+                                                    s.destaque ? "text-white" : "text-[#1D4FE0]"
                                                 }`}
                                                 style={{ fontFamily: FONT_MONO }}
                                             >
@@ -173,8 +170,8 @@ export default function Solucoes() {
                                             rel="noopener noreferrer"
                                             className={`mt-1 inline-flex items-center justify-center gap-2 py-3 px-4 text-sm font-semibold transition-all duration-200 ${
                                                 s.destaque
-                                                    ? "bg-white text-[#0B3B8C] hover:bg-blue-50"
-                                                    : "bg-[#0B3B8C] text-white hover:bg-[#082a63]"
+                                                    ? "bg-white text-[#1D4FE0] hover:bg-blue-50"
+                                                    : "bg-[#1D4FE0] text-white hover:bg-[#163AA8]"
                                             }`}
                                             style={{ fontFamily: FONT_BODY }}
                                         >
@@ -193,7 +190,7 @@ export default function Solucoes() {
                         Não sabe qual escolher? Fale com a gente e te ajudamos a decidir.
                     </p>
                     <a
-                        href="#contato"
+                        href="/contato"
                         className="inline-flex items-center gap-3 bg-black hover:bg-zinc-900 text-white font-semibold text-base px-10 py-4 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto justify-center"
                         style={{ fontFamily: FONT_BODY }}
                     >

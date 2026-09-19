@@ -1,10 +1,10 @@
-import { FaLaptopCode, FaRocket, FaHandshake, FaShieldAlt } from "react-icons/fa";
+import { FaClock, FaFileInvoiceDollar, FaSitemap, FaChartLine } from "react-icons/fa6";
 import type { IconType } from "react-icons";
 import Reveal from "../ui/Reveal";
+import Eyebrow from "../ui/Eyebrow";
 
 const FONT_DISPLAY = "'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Inter', sans-serif";
-const FONT_MONO = "'JetBrains Mono', monospace";
 
 interface Pilar {
     icone: IconType;
@@ -14,60 +14,56 @@ interface Pilar {
 
 const pilares: Pilar[] = [
     {
-        icone: FaLaptopCode,
-        titulo: "Criação de sistemas sob medida",
-        descricao:
-            "Criação de sistemas web: painéis, CRMs, automações e integrações desenhados a partir do seu processo real — não um pacote genérico adaptado às pressas.",
+        icone: FaClock,
+        titulo: "Decisão em tempo real",
+        descricao: "Não com dado de três semanas atrás. Você abre a tela e vê o que está acontecendo na empresa agora.",
     },
     {
-        icone: FaRocket,
-        titulo: "Sites e landing pages que convertem",
-        descricao:
-            "Páginas rápidas, responsivas e otimizadas para SEO, pensadas para transformar visita em contato e contato em cliente.",
+        icone: FaFileInvoiceDollar,
+        titulo: "Fim da planilha",
+        descricao: "Acabou a tarde inteira fechando planilha no fim do mês. O sistema atualiza sozinho.",
     },
     {
-        icone: FaHandshake,
-        titulo: "Atendimento direto",
-        descricao:
-            "Sem intermediários: você fala com quem desenvolve, entende o escopo e acompanha cada etapa do projeto.",
+        icone: FaSitemap,
+        titulo: "Processos organizados",
+        descricao: "Cada etapa do seu processo — do pedido ao pagamento — no mesmo lugar, sem depender de memória.",
     },
     {
-        icone: FaShieldAlt,
-        titulo: "Transparência e propriedade",
-        descricao:
-            "Código, conteúdo e domínio são seus desde a entrega. Condições claras, sem letra miúda.",
+        icone: FaChartLine,
+        titulo: "Tudo num painel só",
+        descricao: "Vendas, financeiro e equipe no mesmo lugar, sem precisar copiar número de canto nenhum.",
     },
 ];
 
-export default function Sobre() {
+export default function Sobre({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" } = {}) {
+    const Heading = headingLevel;
     return (
         <section id="sobre" className="w-full py-20 px-4 bg-white">
             <Reveal className="max-w-5xl mx-auto text-center mb-14">
-                <span
-                    className="inline-block text-[#0B3B8C] text-sm font-semibold uppercase tracking-widest mb-3"
-                    style={{ fontFamily: FONT_MONO }}
-                >
-                    &lt;Sobre a AGL Digital /&gt;
-                </span>
-                <h2
+                <Eyebrow>Sobre o Chonnostech</Eyebrow>
+                <Heading
                     className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight leading-tight"
                     style={{ fontFamily: FONT_DISPLAY }}
                 >
-                    Tecnologia sob medida para o seu negócio crescer
-                </h2>
-                <div className="mt-5 mx-auto w-16 h-1.5 bg-[#0B3B8C]" />
+                    Menos planilha. Mais decisão.
+                </Heading>
+                <div className="mt-5 mx-auto w-16 h-1.5 bg-[#1D4FE0]" />
                 <p
                     className="mt-6 text-slate-600 text-lg leading-relaxed max-w-3xl mx-auto"
                     style={{ fontFamily: FONT_BODY }}
                 >
-                    A AGL Digital é uma empresa de tecnologia focada em dois pilares:{" "}
-                    <strong className="text-black font-semibold">sistemas web personalizados</strong> que
-                    organizam e automatizam processos, e{" "}
+                    O Chonnostech implementa e usa tecnologia para atender empresas:{" "}
                     <strong className="text-black font-semibold">
-                        sites e landing pages de alta conversão
+                        soluções em sistemas e automações
                     </strong>{" "}
-                    que colocam sua empresa no ar com uma presença digital que gera resultado. Cada projeto
-                    é construído sob medida — do primeiro requisito à última linha de código.
+                    que otimizam a gestão do seu negócio, conectando{" "}
+                    <strong className="text-black font-semibold">
+                        pessoas, processos e vendas
+                    </strong>{" "}
+                    em um só lugar.{" "}
+                    <strong className="text-black font-semibold">
+                        Sistema, site e loja online para a sua empresa.
+                    </strong>
                 </p>
             </Reveal>
 
@@ -77,8 +73,8 @@ export default function Sobre() {
                     return (
                         <Reveal key={pilar.titulo} delay={index * 90}>
                             <div className="h-full flex flex-col gap-4 p-6 border border-slate-200 bg-white hover:border-blue-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                                <div className="flex items-center justify-center w-11 h-11 bg-[#0B3B8C]/10">
-                                    <Icone className="text-lg text-[#0B3B8C]" />
+                                <div className="flex items-center justify-center w-11 h-11 bg-[#1D4FE0]/10">
+                                    <Icone className="text-lg text-[#1D4FE0]" />
                                 </div>
                                 <h3
                                     className="text-base font-bold text-black tracking-tight"

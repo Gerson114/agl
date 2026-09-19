@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/', '/.next/', '/private/'],
       },
     ],
-    sitemap: 'https://agl.digital/sitemap.xml',
-    host: 'https://agl.digital',
+    sitemap: 'https://chonnostech.com.br/sitemap.xml',
+    host: 'https://chonnostech.com.br',
   }
 }

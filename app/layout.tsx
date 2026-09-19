@@ -16,45 +16,42 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const baseUrl = "https://agl.digital";
+const baseUrl = "https://chonnostech.com.br";
 
 // 1. Exportação isolada do Viewport (Exigência do Next.js App Router)
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#000000",
+  themeColor: "#0B1120",
 };
 
 // 2. Exportação do Metadata com boas práticas
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "Sistemas Personalizados e Landing Pages | AGL Digital",
+  title: "Chonnostech — Sistema, Site e Loja Online para a sua Empresa",
   description:
-    "Sistemas web sob medida (painéis, CRMs, automações) e landing pages de alta conversão, feitos para o seu processo e para vender mais.",
+    "Sistema de gestão sob medida (vendas, financeiro, estoque e cobrança), sites institucionais e lojas virtuais para empresas de qualquer setor. Sua empresa, num lugar só.",
   keywords: [
-    "sistema personalizado",
-    "desenvolvimento de sistemas sob medida",
-    "criar sistema web",
+    "sistema para empresa",
+    "sistema de gestão empresarial",
     "software sob medida",
     "automação de processos",
+    "gestão empresarial",
     "painel administrativo personalizado",
-    "criação de sistemas",
-    "criação de sistemas web",
-    "empresa de criação de sistemas",
-    "criação de sistemas personalizados",
-    "criar landing page",
-    "landing page de vendas",
-    "website de alta conversão",
-    "site responsivo",
-    "desenvolvimento web",
-    "sistema para empresa",
-    "criar site profissional",
-    "web design profissional",
+    "controle de estoque online",
+    "sistema de vendas",
+    "loja virtual",
+    "criar loja online",
+    "e-commerce sob medida",
+    "site institucional",
+    "dashboard para empresa",
+    "sistema de gestão para empresas",
+    "software para pequenas empresas",
   ],
-  authors: [{ name: "AGL Digital" }],
-  creator: "AGL Digital",
-  publisher: "AGL Digital",
+  authors: [{ name: "Chonnostech" }],
+  creator: "Chonnostech",
+  publisher: "Chonnostech",
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   alternates: {
     canonical: baseUrl,
@@ -71,32 +68,30 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "AGL Digital",
+    title: "Chonnostech",
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
     url: baseUrl,
-    title: "Sistemas Personalizados e Landing Pages | AGL Digital",
+    title: "Chonnostech — Sistema, Site e Loja Online para a sua Empresa",
     description:
-      "Sistemas web sob medida e landing pages de alta conversão. Software que resolve o seu processo e páginas que transformam visitantes em clientes.",
-    siteName: "AGL Digital",
+      "Vendas, financeiro e estoque num painel só, atualizado na hora. Sistema de gestão sob medida, sites e lojas virtuais para empresas de qualquer setor.",
+    siteName: "Chonnostech",
     images: [
       {
         url: `${baseUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "AGL Digital - Sistemas Personalizados e Landing Pages",
+        alt: "Chonnostech - Sistema, Site e Loja Online para a sua Empresa",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@agldigital",
-    creator: "@agldigital",
-    title: "Sistemas Personalizados e Landing Pages | AGL Digital",
+    title: "Chonnostech — Sistema, Site e Loja Online para a sua Empresa",
     description:
-      "Sistemas web sob medida e landing pages de alta conversão para o seu negócio.",
+      "Vendas, financeiro e estoque num painel só, atualizado na hora. Sistema de gestão sob medida para a sua empresa.",
     images: [`${baseUrl}/twitter-image.jpg`],
   },
 };
@@ -134,11 +129,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "AGL Digital",
-              url: "https://agl.digital",
-              image: "https://agl.digital/logo.png",
+              name: "Chonnostech",
+              url: baseUrl,
+              image: `${baseUrl}/logo.png`,
               description:
-                "Empresa especializada em desenvolvimento de sistemas web personalizados (painéis, CRMs, automações) e landing pages de alta conversão para vendas.",
+                "Soluções em sistemas e automações para otimizar a gestão da sua empresa: estoque, vendas, financeiro e cobrança num só lugar, além de sites e lojas virtuais.",
               address: {
                 "@type": "PostalAddress",
                 addressCountry: "BR",
@@ -146,13 +141,8 @@ export default function RootLayout({
                 addressRegion: "PE",
               },
               telephone: "+55-81-98358-3549",
-              email: "contato@agl.digital",
-              sameAs: [
-                "https://www.facebook.com/agldigital",
-                "https://www.instagram.com/agldigital",
-                "https://www.linkedin.com/company/agldigital",
-                "https://twitter.com/agldigital",
-              ],
+              email: "contato@chonnostech.com.br",
+              sameAs: ["https://www.instagram.com/chonnostech/"],
               areaServed: {
                 "@type": "Country",
                 name: "BR",
@@ -162,12 +152,12 @@ export default function RootLayout({
                 "@type": "ContactPoint",
                 contactType: "Sales",
                 telephone: "+55-81-98358-3549",
-                email: "contato@agl.digital",
-                availableLanguage: ["pt-BR", "en"],
+                email: "contato@chonnostech.com.br",
+                availableLanguage: ["pt-BR"],
               },
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
-                name: "Serviços AGL Digital",
+                name: "Serviços Chonnostech",
                 itemListElement: [
                   {
                     "@type": "Offer",
@@ -180,9 +170,20 @@ export default function RootLayout({
                     },
                     itemOffered: {
                       "@type": "Service",
-                      name: "Criação de Sistemas Web Personalizados",
+                      name: "Sistema de Gestão Personalizado",
                       description:
-                        "Criação de sistemas web sob medida: painéis, CRMs, automações e integrações desenvolvidos para o processo da sua empresa.",
+                        "Vendas, financeiro, estoque e cobrança num painel só, sob medida para o processo da sua empresa.",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    price: "1200",
+                    priceCurrency: "BRL",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Loja Virtual (Loja Online)",
+                      description:
+                        "Loja virtual com catálogo, carrinho e pagamento integrados ao sistema de estoque.",
                     },
                   },
                   {
@@ -191,20 +192,9 @@ export default function RootLayout({
                     priceCurrency: "BRL",
                     itemOffered: {
                       "@type": "Service",
-                      name: "Landing Page de Alta Conversão",
+                      name: "Site Institucional",
                       description:
-                        "Página única ultra-otimizada para transformar visitantes em clientes. Perfeita para campanhas de tráfego pago.",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    price: "800",
-                    priceCurrency: "BRL",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Site Institucional Completo",
-                      description:
-                        "Presença digital robusta com múltiplas páginas para passar autoridade e apresentar sua empresa.",
+                        "Presença profissional na internet para passar confiança e reunir os canais de contato da empresa.",
                     },
                   },
                 ],

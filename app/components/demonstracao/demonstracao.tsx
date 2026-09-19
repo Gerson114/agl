@@ -5,6 +5,7 @@ import Image, { type StaticImageData } from "next/image";
 import { FaWhatsapp, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { NUMERO_WHATSAPP } from "../../data/servicos";
 import Reveal from "../ui/Reveal";
+import Eyebrow from "../ui/Eyebrow";
 import imgProdutos from "../../../public/demo/slide-produtos.webp";
 import imgEstoque from "../../../public/demo/slide-estoque.webp";
 import imgBanners from "../../../public/demo/slide-banners.webp";
@@ -99,25 +100,22 @@ export default function Demonstracao() {
     return (
         <section id="demonstracao" className="w-full py-20 px-4 bg-[#0B1120]">
             <Reveal className="max-w-3xl mx-auto text-center mb-14">
-                <span
-                    className="inline-block text-[#6FA0EC] text-sm font-semibold uppercase tracking-widest mb-3"
-                    style={{ fontFamily: FONT_MONO }}
-                >
-                    &lt;Sistema real em funcionamento /&gt;
-                </span>
+                <Eyebrow tone="dark">Sistema real em funcionamento</Eyebrow>
                 <h2
                     className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
                     style={{ fontFamily: FONT_DISPLAY }}
                 >
                     Isso aqui não é print de mockup, é o sistema rodando
                 </h2>
-                <div className="mt-5 mx-auto w-16 h-1.5 bg-[#0B3B8C]" />
+                <div className="mt-5 mx-auto w-16 h-1.5 bg-[#1D4FE0]" />
                 <p
                     className="mt-6 text-slate-300 text-lg leading-relaxed"
                     style={{ fontFamily: FONT_BODY }}
                 >
                     Um painel administrativo de verdade, do jeito que entregamos para os nossos
-                    clientes. Passeie pelas telas abaixo.
+                    clientes — neste caso, para um cliente do varejo. Cada sistema é desenhado
+                    para o processo de cada empresa, seja qual for o seu setor. Passeie pelas
+                    telas abaixo.
                 </p>
             </Reveal>
 
@@ -131,7 +129,7 @@ export default function Demonstracao() {
                             onClick={() => go(i)}
                             className={`flex items-center gap-2 px-4 py-2 text-xs font-semibold border transition-colors duration-200 ${
                                 i === index
-                                    ? "bg-[#0B3B8C] border-[#0B3B8C] text-white"
+                                    ? "bg-[#1D4FE0] border-[#1D4FE0] text-white"
                                     : "bg-transparent border-white/15 text-slate-400 hover:border-white/30 hover:text-white"
                             }`}
                             style={{ fontFamily: FONT_MONO }}
@@ -158,7 +156,7 @@ export default function Demonstracao() {
                                     className="flex-1 text-center sm:text-left text-[11px] text-slate-400 bg-[#0B1120] border border-white/10 px-3 py-1 truncate"
                                     style={{ fontFamily: FONT_MONO }}
                                 >
-                                    seusistema.com.br/painel/{atual.label.toLowerCase()}
+                                    painel.chonnostech.com.br/{atual.label.toLowerCase()}
                                 </span>
                             </div>
                             <div
@@ -187,7 +185,7 @@ export default function Demonstracao() {
                             type="button"
                             onClick={() => go(index - 1)}
                             aria-label="Tela anterior"
-                            className="hidden sm:flex absolute top-1/2 -translate-y-1/2 -left-4 w-9 h-9 items-center justify-center bg-[#131B2E] border border-white/15 text-white hover:bg-[#0B3B8C] hover:border-[#0B3B8C] transition-colors"
+                            className="hidden sm:flex absolute top-1/2 -translate-y-1/2 -left-4 w-9 h-9 items-center justify-center bg-[#131B2E] border border-white/15 text-white hover:bg-[#1D4FE0] hover:border-[#1D4FE0] transition-colors"
                         >
                             <FaChevronLeft className="text-xs" />
                         </button>
@@ -195,7 +193,7 @@ export default function Demonstracao() {
                             type="button"
                             onClick={() => go(index + 1)}
                             aria-label="Próxima tela"
-                            className="hidden sm:flex absolute top-1/2 -translate-y-1/2 -right-4 w-9 h-9 items-center justify-center bg-[#131B2E] border border-white/15 text-white hover:bg-[#0B3B8C] hover:border-[#0B3B8C] transition-colors"
+                            className="hidden sm:flex absolute top-1/2 -translate-y-1/2 -right-4 w-9 h-9 items-center justify-center bg-[#131B2E] border border-white/15 text-white hover:bg-[#1D4FE0] hover:border-[#1D4FE0] transition-colors"
                         >
                             <FaChevronRight className="text-xs" />
                         </button>
@@ -204,7 +202,7 @@ export default function Demonstracao() {
                     {/* texto explicando a tela ativa */}
                     <div key={atual.label} className="lg:col-span-2 demo-fade">
                         <span
-                            className="text-[#6FA0EC] text-xs font-semibold uppercase tracking-widest"
+                            className="text-[#6E9CFF] text-xs font-semibold uppercase tracking-widest"
                             style={{ fontFamily: FONT_MONO }}
                         >
                             Tela {String(index + 1).padStart(2, "0")} de {String(slides.length).padStart(2, "0")}
@@ -228,7 +226,7 @@ export default function Demonstracao() {
                                     className="flex items-start gap-2.5 text-sm text-slate-300"
                                     style={{ fontFamily: FONT_BODY }}
                                 >
-                                    <span className="mt-1.5 w-1.5 h-1.5 bg-[#6FA0EC] shrink-0" />
+                                    <span className="mt-1.5 w-1.5 h-1.5 bg-[#6E9CFF] shrink-0" />
                                     {ponto}
                                 </li>
                             ))}
@@ -248,7 +246,7 @@ export default function Demonstracao() {
                         href={linkWhatsapp}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 bg-[#0B3B8C] hover:bg-[#0A3277] text-white font-semibold text-sm px-6 py-3.5 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 shrink-0"
+                        className="inline-flex items-center gap-3 bg-[#1D4FE0] hover:bg-[#1640C2] text-white font-semibold text-sm px-6 py-3.5 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 shrink-0"
                         style={{ fontFamily: FONT_BODY }}
                     >
                         <FaWhatsapp className="text-base" />

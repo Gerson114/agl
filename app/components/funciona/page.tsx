@@ -10,6 +10,7 @@ import {
     FaKey,
 } from "react-icons/fa";
 import Reveal from "../ui/Reveal";
+import Eyebrow from "../ui/Eyebrow";
 
 const FONT_DISPLAY = "'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Inter', sans-serif";
@@ -74,7 +75,7 @@ function ItemAcordeao({
     return (
         <div
             className={` border transition-colors duration-300 overflow-hidden ${
-                aberto ? "border-[#0B3B8C] bg-[#0B3B8C]/5" : "border-slate-200 bg-white"
+                aberto ? "border-[#1D4FE0] bg-[#1D4FE0]/5" : "border-slate-200 bg-white"
             }`}
         >
             <button
@@ -86,7 +87,7 @@ function ItemAcordeao({
             >
                 <span
                     className={`shrink-0 text-xs font-semibold w-8 h-8 flex items-center justify-center ${
-                        aberto ? "bg-[#0B3B8C] text-white" : "bg-slate-100 text-slate-500"
+                        aberto ? "bg-[#1D4FE0] text-white" : "bg-slate-100 text-slate-500"
                     }`}
                     style={{ fontFamily: FONT_MONO }}
                 >
@@ -95,10 +96,10 @@ function ItemAcordeao({
 
                 <span
                     className={`shrink-0 hidden sm:flex items-center justify-center w-10 h-10 ${
-                        aberto ? "bg-[#0B3B8C]/10" : "bg-slate-50"
+                        aberto ? "bg-[#1D4FE0]/10" : "bg-slate-50"
                     }`}
                 >
-                    <Icone className={`text-lg ${aberto ? "text-[#0B3B8C]" : "text-slate-400"}`} />
+                    <Icone className={`text-lg ${aberto ? "text-[#1D4FE0]" : "text-slate-400"}`} />
                 </span>
 
                 <span className="flex-1 min-w-0">
@@ -118,7 +119,7 @@ function ItemAcordeao({
 
                 <FaChevronDown
                     className={`shrink-0 text-slate-400 transition-transform duration-300 ${
-                        aberto ? "rotate-180 text-[#0B3B8C]" : ""
+                        aberto ? "rotate-180 text-[#1D4FE0]" : ""
                     }`}
                 />
             </button>
@@ -141,7 +142,8 @@ function ItemAcordeao({
     );
 }
 
-export default function Funciona() {
+export default function Funciona({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" } = {}) {
+    const Heading = headingLevel;
     const [aberto, setAberto] = useState<string | null>("0-0");
 
     const faqSchema = {
@@ -166,19 +168,14 @@ export default function Funciona() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <Reveal className="text-center mb-14 max-w-2xl mx-auto">
-                <span
-                    className="inline-block text-[#0B3B8C] text-sm font-semibold uppercase tracking-widest mb-3"
-                    style={{ fontFamily: FONT_MONO }}
-                >
-                    &lt;Como Funciona /&gt;
-                </span>
-                <h2
+                <Eyebrow>Como Funciona</Eyebrow>
+                <Heading
                     className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight leading-tight"
                     style={{ fontFamily: FONT_DISPLAY }}
                 >
                     Do projeto pronto até a manutenção contínua
-                </h2>
-                <div className="mt-5 mx-auto w-16 h-1.5 bg-[#0B3B8C]" />
+                </Heading>
+                <div className="mt-5 mx-auto w-16 h-1.5 bg-[#1D4FE0]" />
                 <p
                     className="mt-6 text-slate-600 text-lg leading-relaxed"
                     style={{ fontFamily: FONT_BODY }}

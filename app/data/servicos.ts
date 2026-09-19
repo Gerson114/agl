@@ -1,4 +1,4 @@
-import { FaRocket, FaCode, FaLaptopCode } from "react-icons/fa";
+import { FaLaptopCode, FaShoppingCart, FaGlobe } from "react-icons/fa";
 import type { IconType } from "react-icons";
 
 export const NUMERO_WHATSAPP = "5581983583549"; // DDI + DDD + número, sem espaços ou símbolos
@@ -24,53 +24,53 @@ export interface Servico {
 export const servicos: Servico[] = [
     {
         icone: FaLaptopCode,
-        titulo: "Sistema Web Personalizado",
+        titulo: "Sistema Personalizado (Dashboard)",
         descricao:
-            "Criação de sistemas sob medida: painéis administrativos, CRMs, automações e integrações desenvolvidos para o processo da sua empresa — nada de sistema genérico.",
-        preco: "",
-        prefixoPreco: "investimento",
-        sobConsulta: true,
+            "Vendas, financeiro, equipe e operação num painel só, atualizado na hora — sob medida para o processo real da sua empresa.",
+        preco: "100",
+        prefixoPreco: "a partir de R$",
+        sufixoPreco: "/mês",
         url: "seusistema.com.br/painel",
         destaque: true,
         badge: "Sob medida",
         condicoes: {
-            pagamento: "Escopo, prazo e valor definidos após entender sua necessidade.",
+            pagamento: "A partir de R$ 100/mês alugando o sistema, sem comprar. Para comprar (código 100% seu), escopo e valor são definidos após entender o seu negócio.",
             bonus: [
-                "Levantamento de requisitos gratuito",
-                "Arquitetura pensada para crescer com o negócio",
-                "Suporte técnico durante a implantação",
-                "Código e dados 100% seus",
+                "Levantamento gratuito do seu processo atual",
+                "Módulos sob medida: vendas, financeiro, estoque, cobrança",
+                "Dashboard atualizado em tempo real",
+                "Suporte técnico incluso no plano",
             ],
         },
-        linkSlug: "#contato",
+        linkSlug: "/contato",
     },
     {
-        icone: FaRocket,
-        titulo: "Landing Page de Alta Conversão",
+        icone: FaShoppingCart,
+        titulo: "Loja Virtual (Loja Online)",
         descricao:
-            "Página única ultra-otimizada para transformar visitantes em clientes. Perfeita para campanhas de tráfego pago no Google, Meta e TikTok Ads.",
-        preco: "500",
+            "Sua empresa vendendo pela internet, com catálogo, carrinho e pagamento integrados ao mesmo sistema que controla o seu negócio.",
+        preco: "1.200",
         prefixoPreco: "a partir de R$",
-        url: "sualandingpage.com.br",
+        url: "sualoja.com.br",
         destaque: false,
-        badge: "Mais popular",
+        badge: "Venda 24h",
         condicoes: {
             pagamento: "Pagamento facilitado: 50% no início e 50% na entrega.",
             bonus: [
                 "Domínio grátis no 1º ano",
-                "Otimização de SEO inclusa",
+                "Catálogo sincronizado com o sistema",
                 "3 meses de hospedagem grátis",
                 "3 meses de manutenção grátis (ajustes de textos e imagens)",
             ],
         },
-        linkSlug: "#contato",
+        linkSlug: "/contato",
     },
     {
-        icone: FaCode,
-        titulo: "Site Institucional Completo",
+        icone: FaGlobe,
+        titulo: "Site Institucional",
         descricao:
-            "Presença digital robusta com múltiplas páginas para passar autoridade, apresentar sua empresa, serviços e canais de contato.",
-        preco: "800,00",
+            "Presença profissional na internet para passar confiança, aparecer no Google e reunir WhatsApp, redes sociais e contato num só lugar.",
+        preco: "500",
         prefixoPreco: "a partir de R$",
         url: "suaempresa.com.br",
         destaque: false,
@@ -83,6 +83,6 @@ export const servicos: Servico[] = [
                 "1 mês de manutenção grátis (ajustes de textos e imagens)",
             ],
         },
-        linkSlug: "#contato",
+        linkSlug: "/contato",
     },
 ];

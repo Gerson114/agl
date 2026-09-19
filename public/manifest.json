@@ -1,13 +1,13 @@
 {
-  "name": "AGL Digital - Sistemas Personalizados e Landing Pages",
-  "short_name": "AGL Digital",
-  "description": "Desenvolvimento de sistemas web sob medida e landing pages de alta conversão",
+  "name": "Chonnostech - Sistema, Site e Loja Online para a sua Empresa",
+  "short_name": "Chonnostech",
+  "description": "Sistema de gestão sob medida, sites institucionais e lojas virtuais para quem vende",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
+  "theme_color": "#0B1120",
+  "background_color": "#0B1120",
   "icons": [
     {
       "src": "/favicon.ico",

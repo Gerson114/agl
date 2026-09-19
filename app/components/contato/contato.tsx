@@ -13,10 +13,10 @@ import {
 } from "react-icons/fa";
 import { NUMERO_WHATSAPP, servicos as servicosDisponiveis } from "../../data/servicos";
 import Reveal from "../ui/Reveal";
+import Eyebrow from "../ui/Eyebrow";
 
 const FONT_DISPLAY = "'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Inter', sans-serif";
-const FONT_MONO = "'JetBrains Mono', monospace";
 
 const NUMERO = NUMERO_WHATSAPP;
 
@@ -25,7 +25,8 @@ const servicos = [
     "Ainda não sei, quero uma indicação",
 ];
 
-export default function Contato() {
+export default function Contato({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" } = {}) {
+    const Heading = headingLevel;
     const [nome, setNome] = useState("");
     const [telefone, setTelefone] = useState("");
     const [servico, setServico] = useState(servicos[0]);
@@ -55,25 +56,20 @@ export default function Contato() {
         <section id="contato" className="w-full py-20 px-4 bg-[#F5F6FA]">
             <div className="max-w-5xl mx-auto">
                 <Reveal className="text-center mb-12">
-                    <span
-                        className="inline-block text-[#0B3B8C] text-sm font-semibold uppercase tracking-widest mb-3"
-                        style={{ fontFamily: FONT_MONO }}
-                    >
-                        &lt;Fale com a gente /&gt;
-                    </span>
-                    <h2
+                    <Eyebrow>Fale com a gente</Eyebrow>
+                    <Heading
                         className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight leading-tight"
                         style={{ fontFamily: FONT_DISPLAY }}
                     >
-                        Vamos tirar seu site do papel
-                    </h2>
-                    <div className="mt-5 mx-auto w-16 h-1.5 bg-[#0B3B8C]" />
+                        Vamos tirar sua empresa da planilha?
+                    </Heading>
+                    <div className="mt-5 mx-auto w-16 h-1.5 bg-[#1D4FE0]" />
                     <p
                         className="mt-6 text-slate-600 text-lg leading-relaxed"
                         style={{ fontFamily: FONT_BODY }}
                     >
                         Preencha os dados abaixo e sua mensagem já chega prontinha no nosso
-                        WhatsApp.
+                        WhatsApp. Sem enrolação.
                     </p>
                 </Reveal>
 
@@ -91,31 +87,31 @@ export default function Contato() {
                                 href={`https://wa.me/${NUMERO}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-slate-700 hover:text-[#0B3B8C] transition-colors"
+                                className="flex items-center gap-3 text-slate-700 hover:text-[#1D4FE0] transition-colors"
                                 style={{ fontFamily: FONT_BODY }}
                             >
-                                <FaWhatsapp className="text-[#0B3B8C] shrink-0" />
+                                <FaWhatsapp className="text-[#1D4FE0] shrink-0" />
                                 <span className="text-sm">(81) 98358-3549</span>
                             </a>
 
                             <a
-                                href="mailto:contato@agl.digital"
-                                className="flex items-center gap-3 text-slate-700 hover:text-[#0B3B8C] transition-colors"
+                                href="mailto:contato@chonnostech.com.br"
+                                className="flex items-center gap-3 text-slate-700 hover:text-[#1D4FE0] transition-colors"
                                 style={{ fontFamily: FONT_BODY }}
                             >
-                                <FaEnvelope className="text-[#0B3B8C] shrink-0" />
-                                <span className="text-sm">contato@agl.digital</span>
+                                <FaEnvelope className="text-[#1D4FE0] shrink-0" />
+                                <span className="text-sm">contato@chonnostech.com.br</span>
                             </a>
 
                             <div className="flex items-center gap-3 text-slate-700">
-                                <FaMapMarkerAlt className="text-[#0B3B8C] shrink-0" />
+                                <FaMapMarkerAlt className="text-[#1D4FE0] shrink-0" />
                                 <span className="text-sm" style={{ fontFamily: FONT_BODY }}>
                                     Recife, PE — atendimento para todo o Brasil
                                 </span>
                             </div>
 
                             <div className="flex items-center gap-3 text-slate-700">
-                                <FaClock className="text-[#0B3B8C] shrink-0" />
+                                <FaClock className="text-[#1D4FE0] shrink-0" />
                                 <span className="text-sm" style={{ fontFamily: FONT_BODY }}>
                                     Respondemos em até 1 dia útil
                                 </span>
@@ -137,7 +133,7 @@ export default function Contato() {
                         >
                             Nome
                         </label>
-                        <div className="flex items-center gap-3 border border-slate-200 px-4 py-3 focus-within:border-[#0B3B8C] transition-colors">
+                        <div className="flex items-center gap-3 border border-slate-200 px-4 py-3 focus-within:border-[#1D4FE0] transition-colors">
                             <FaUser className="text-slate-400 shrink-0" />
                             <input
                                 id="nome"
@@ -160,7 +156,7 @@ export default function Contato() {
                         >
                             Telefone / WhatsApp
                         </label>
-                        <div className="flex items-center gap-3 border border-slate-200 px-4 py-3 focus-within:border-[#0B3B8C] transition-colors">
+                        <div className="flex items-center gap-3 border border-slate-200 px-4 py-3 focus-within:border-[#1D4FE0] transition-colors">
                             <FaPhone className="text-slate-400 shrink-0" />
                             <input
                                 id="telefone"
@@ -188,7 +184,7 @@ export default function Contato() {
                                 id="servico"
                                 value={servico}
                                 onChange={(e) => setServico(e.target.value)}
-                                className="w-full appearance-none border border-slate-200 px-4 py-3 pr-10 outline-none text-slate-800 focus:border-[#0B3B8C] transition-colors bg-white"
+                                className="w-full appearance-none border border-slate-200 px-4 py-3 pr-10 outline-none text-slate-800 focus:border-[#1D4FE0] transition-colors bg-white"
                                 style={{ fontFamily: FONT_BODY }}
                             >
                                 {servicos.map((s) => (
@@ -210,7 +206,7 @@ export default function Contato() {
                         >
                             Mensagem <span className="text-slate-400 font-normal">(opcional)</span>
                         </label>
-                        <div className="flex items-start gap-3 border border-slate-200 px-4 py-3 focus-within:border-[#0B3B8C] transition-colors">
+                        <div className="flex items-start gap-3 border border-slate-200 px-4 py-3 focus-within:border-[#1D4FE0] transition-colors">
                             <FaCommentDots className="text-slate-400 shrink-0 mt-1" />
                             <textarea
                                 id="mensagem"

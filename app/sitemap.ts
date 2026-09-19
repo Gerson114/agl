@@ -1,15 +1,15 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://agl.digital'
+  const baseUrl = 'https://chonnostech.com.br'
   const lastModified = new Date()
 
-  return [
-    {
-      url: baseUrl,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-  ]
+  const rotas = ['', '/sobre', '/sistema', '/como-funciona', '/solucoes', '/contato']
+
+  return rotas.map((rota) => ({
+    url: `${baseUrl}${rota}`,
+    lastModified,
+    changeFrequency: 'weekly',
+    priority: rota === '' ? 1.0 : 0.7,
+  }))
 }

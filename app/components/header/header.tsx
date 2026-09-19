@@ -3,7 +3,9 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
+import Logo from "../ui/Logo";
 
 const FONT_DISPLAY = "'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Inter', sans-serif";
@@ -21,20 +23,26 @@ function getMontadoServer() {
 }
 
 const navLinks = [
-    { label: "Home", href: "#top" },
-    { label: "Sobre", href: "#sobre" },
-    { label: "Demonstração", href: "#demonstracao" },
-    { label: "Como Funciona", href: "#como-funciona" },
-    { label: "Soluções", href: "#solucoes" },
-    { label: "Contato", href: "#contato" },
+    { label: "Home", href: "/" },
+    { label: "Sobre", href: "/sobre" },
+    { label: "Sistemas", href: "/sistema" },
+    { label: "Soluções", href: "/solucoes" },
+    { label: "Contato", href: "/contato" },
 ];
+
+function ativo(pathname: string, href: string) {
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 function MenuMobile({
     aberto,
     onFechar,
+    pathname,
 }: {
     aberto: boolean;
     onFechar: () => void;
+    pathname: string;
 }) {
     return (
         <>
@@ -78,7 +86,12 @@ function MenuMobile({
                                 key={link.href}
                                 href={link.href}
                                 onClick={onFechar}
-                                className="block px-4 py-3 text-[15px] font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0B3B8C] transition-colors"
+                                aria-current={ativo(pathname, link.href) ? "page" : undefined}
+                                className={`block px-4 py-3 text-[15px] font-medium transition-colors ${
+                                    ativo(pathname, link.href)
+                                        ? "bg-blue-50 text-[#1D4FE0]"
+                                        : "text-slate-700 hover:bg-slate-100 hover:text-[#1D4FE0]"
+                                }`}
                                 style={{ fontFamily: FONT_BODY }}
                             >
                                 {link.label}
@@ -87,9 +100,9 @@ function MenuMobile({
                     </nav>
                     <Link
                         id="btn-whatsapp-mobile"
-                        href="#contato"
+                        href="/contato"
                         onClick={onFechar}
-                        className="mt-4 inline-flex w-full items-center justify-center gap-2 bg-[#0B3B8C] hover:bg-[#0A3277] px-4 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg transition-all"
+                        className="mt-4 inline-flex w-full items-center justify-center gap-2 bg-[#1D4FE0] hover:bg-[#1640C2] px-4 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg transition-all"
                         style={{ fontFamily: FONT_BODY }}
                     >
                         <FaWhatsapp className="text-base" />
@@ -102,6 +115,7 @@ function MenuMobile({
 }
 
 export default function Header() {
+    const pathname = usePathname();
     const [rolado, setRolado] = useState(false);
     const [menuAberto, setMenuAberto] = useState(false);
     // só temos "document.body" depois de montar no cliente
@@ -151,44 +165,44 @@ export default function Header() {
             >
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2.5 group">
-                    <span
-                        aria-hidden="true"
-                        className={`flex items-center justify-center bg-linear-to-br from-[#0B3B8C] to-[#0A2F70] text-white shadow-md group-hover:shadow-lg group-hover:from-[#0A3277] group-hover:to-[#082458] transition-all duration-300 ${
+                    <Logo
+                        className={`shrink-0 transition-all duration-300 group-hover:scale-105 ${
                             rolado ? "w-8 h-8" : "w-10 h-10"
                         }`}
-                    >
-                        <span
-                            className={`font-bold tracking-tight transition-all duration-300 ${
-                                rolado ? "text-[11px]" : "text-xs"
-                            }`}
-                            style={{ fontFamily: FONT_DISPLAY }}
-                        >
-                            AGL
-                        </span>
-                    </span>
+                    />
                     <span
                         className={`font-bold tracking-tight text-black transition-all duration-300 ${
                             rolado ? "text-lg" : "text-xl"
                         }`}
                         style={{ fontFamily: FONT_DISPLAY }}
                     >
-                        AGL Digital
+                        Chonnostech
                     </span>
                 </Link>
 
                 {/* Navegação */}
-                <nav aria-label="Navegação principal" className="hidden md:flex items-center gap-2">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className="relative px-4 py-2 text-[15px] font-medium text-slate-600 hover:text-[#0B3B8C] transition-colors duration-200 hover:bg-blue-50/70 group"
-                            style={{ fontFamily: FONT_BODY }}
-                        >
-                            {link.label}
-                            <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#0B3B8C] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                        </Link>
-                    ))}
+                <nav aria-label="Navegação principal" className="hidden md:flex items-center gap-1">
+                    {navLinks.map((link) => {
+                        const isAtivo = ativo(pathname, link.href);
+                        return (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                aria-current={isAtivo ? "page" : undefined}
+                                className={`relative px-4 py-2 text-[15px] font-medium transition-colors duration-200 group ${
+                                    isAtivo ? "text-[#1D4FE0]" : "text-slate-600 hover:text-[#1D4FE0] hover:bg-blue-50/70"
+                                }`}
+                                style={{ fontFamily: FONT_BODY }}
+                            >
+                                {link.label}
+                                <span
+                                    className={`absolute bottom-1 left-4 right-4 h-0.5 bg-[#1D4FE0] transition-transform duration-300 origin-left ${
+                                        isAtivo ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                                    }`}
+                                />
+                            </Link>
+                        );
+                    })}
                 </nav>
 
                 <div className="flex items-center gap-3">
@@ -205,8 +219,8 @@ export default function Header() {
 
                     <Link
                         id="btn-whatsapp-header"
-                        href="#contato"
-                        className={`hidden md:inline-flex items-center gap-2 bg-[#0B3B8C] hover:bg-[#0A3277] text-white font-semibold text-sm shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 ${
+                        href="/contato"
+                        className={`hidden md:inline-flex items-center gap-2 bg-[#1D4FE0] hover:bg-[#1640C2] text-white font-semibold text-sm shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 ${
                             rolado ? "px-4 py-2" : "px-5 py-2.5"
                         }`}
                         style={{ fontFamily: FONT_BODY }}
@@ -221,7 +235,7 @@ export default function Header() {
                 containing block criado pelo backdrop-blur do header */}
             {montado &&
                 createPortal(
-                    <MenuMobile aberto={menuAberto} onFechar={() => setMenuAberto(false)} />,
+                    <MenuMobile aberto={menuAberto} onFechar={() => setMenuAberto(false)} pathname={pathname} />,
                     document.body
                 )}
         </header>
