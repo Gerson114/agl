@@ -38,7 +38,7 @@ export default function Solucoes({ headingLevel = "h2" }: { headingLevel?: "h1" 
             </div>
 
             <div className="w-full py-16 px-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
                     {servicos.map((s, index) => {
                         const Icone = s.icone;
                         const bonus = s.condicoes?.bonus;

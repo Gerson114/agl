@@ -147,7 +147,7 @@ export default function RootLayout({
                 "@type": "Country",
                 name: "BR",
               },
-              priceRange: "R$ 500 - R$ 5000+",
+              priceRange: "R$ 100 - R$ 5000+",
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "Sales",
@@ -164,15 +164,26 @@ export default function RootLayout({
                     priceCurrency: "BRL",
                     priceSpecification: {
                       "@type": "PriceSpecification",
-                      minPrice: 500,
+                      minPrice: 100,
                       maxPrice: 5000,
                       priceCurrency: "BRL",
                     },
                     itemOffered: {
                       "@type": "Service",
-                      name: "Sistema de Gestão Personalizado",
+                      name: "Sistema Personalizado (Dashboard)",
                       description:
-                        "Vendas, financeiro, estoque e cobrança num painel só, sob medida para o processo da sua empresa.",
+                        "Vendas, financeiro, estoque e cobrança num painel só, sob medida para o processo da sua empresa. A partir de R$ 100/mês alugando o sistema.",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    price: "500",
+                    priceCurrency: "BRL",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Landing Page de Alta Conversão",
+                      description:
+                        "Página única ultra-otimizada para transformar visitantes em clientes, ideal para campanhas de tráfego pago.",
                     },
                   },
                   {

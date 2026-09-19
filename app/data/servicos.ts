@@ -1,4 +1,4 @@
-import { FaLaptopCode, FaShoppingCart, FaGlobe } from "react-icons/fa";
+import { FaLaptopCode, FaShoppingCart, FaGlobe, FaRocket } from "react-icons/fa";
 import type { IconType } from "react-icons";
 
 export const NUMERO_WHATSAPP = "5581983583549"; // DDI + DDD + número, sem espaços ou símbolos
@@ -40,6 +40,27 @@ export const servicos: Servico[] = [
                 "Módulos sob medida: vendas, financeiro, estoque, cobrança",
                 "Dashboard atualizado em tempo real",
                 "Suporte técnico incluso no plano",
+            ],
+        },
+        linkSlug: "/contato",
+    },
+    {
+        icone: FaRocket,
+        titulo: "Landing Page de Alta Conversão",
+        descricao:
+            "Página única ultra-otimizada para transformar visitante em cliente. Perfeita para campanhas de tráfego pago no Google, Meta e TikTok Ads.",
+        preco: "500",
+        prefixoPreco: "a partir de R$",
+        url: "sualandingpage.com.br",
+        destaque: false,
+        badge: "Mais popular",
+        condicoes: {
+            pagamento: "Pagamento facilitado: 50% no início e 50% na entrega.",
+            bonus: [
+                "Domínio grátis no 1º ano",
+                "Otimização de SEO inclusa",
+                "3 meses de hospedagem grátis",
+                "3 meses de manutenção grátis (ajustes de textos e imagens)",
             ],
         },
         linkSlug: "/contato",
