@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/metadata";
 import Solucoes from "../components/solucoes/solucoes";
 
-export const metadata: Metadata = {
-    title: "Sistemas Internos e Automação de Processos | Chonnostech",
+export const metadata = createPageMetadata({
+    title: "Soluções em Sistemas e Automação | Chonnostech",
     description:
-        "Compare sistemas internos, gestão de tarefas, dashboards e automação de processos. Projetos sob medida para a operação da sua empresa.",
-    alternates: { canonical: "/solucoes" },
-};
+        "Conheça as soluções da Chonnostech: sistemas internos, gestão de tarefas, dashboards e automação. Defina o projeto ideal para a operação da sua empresa.",
+    path: "/solucoes",
+});
 
 export default function SolucoesPage() {
     return <Solucoes headingLevel="h1" />;

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/metadata";
 import Link from "next/link";
 import {
     FaHandshake,
@@ -19,12 +19,12 @@ const FONT_DISPLAY = "'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Inter', sans-serif";
 const FONT_MONO = "'JetBrains Mono', monospace";
 
-export const metadata: Metadata = {
-    title: "Sobre | Chonnostech",
+export const metadata = createPageMetadata({
+    title: "Sobre Nós | Chonnostech",
     description:
-        "A Chonnostech desenvolve sistemas internos para empresas e automações de processos que conectam tarefas, equipes e informações em soluções sob medida.",
-    alternates: { canonical: "/sobre" },
-};
+        "Conheça a Chonnostech e nossa forma de desenvolver sistemas e automações: atendimento direto, tecnologia sob medida, transparência e suporte após a entrega.",
+    path: "/sobre",
+});
 
 interface Diferencial {
     icone: IconType;

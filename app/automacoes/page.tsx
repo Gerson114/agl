@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/metadata";
 import Link from "next/link";
 import {
     FaArrowRight,
@@ -12,19 +12,12 @@ import {
 import Reveal from "../components/ui/Reveal";
 import Eyebrow from "../components/ui/Eyebrow";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
     title: "Automação de Processos para Empresas | Chonnostech",
-    description: "Automatize tarefas repetitivas, conecte sistemas e acompanhe processos da sua empresa. Automação sob medida com diagnóstico, escopo e implantação acompanhada.",
-    alternates: { canonical: "/automacoes" },
-    openGraph: {
-        type: "website",
-        locale: "pt_BR",
-        siteName: "Chonnostech",
-        url: "/automacoes",
-        title: "Automação de processos para sua empresa | Chonnostech",
-        description: "Conecte ferramentas e automatize processos conforme as regras da sua empresa.",
-    },
-};
+    description:
+        "Automatize tarefas repetitivas, integre ferramentas e organize aprovações e notificações. A Chonnostech cria fluxos conforme as regras da sua empresa.",
+    path: "/automacoes",
+});
 
 const exemplos = [
     { icon: FaArrowsRotate, title: "Tarefas repetidas entre ferramentas", text: "Reduza o trabalho de copiar as mesmas informações de um sistema para outro quando uma etapa é concluída." },

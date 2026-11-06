@@ -12,6 +12,9 @@ import Hero from "./components/HeroSection/hero";
 import Sobre from "./components/sobre/sobre";
 import Reveal from "./components/ui/Reveal";
 import Eyebrow from "./components/ui/Eyebrow";
+import { homeMetadata } from "./lib/metadata";
+
+export const metadata = homeMetadata;
 
 const FONT_DISPLAY = "'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Inter', sans-serif";

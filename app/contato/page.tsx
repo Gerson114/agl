@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/metadata";
 import Contato from "../components/contato/contato";
 
-export const metadata: Metadata = {
-    title: "Contato | Chonnostech",
+export const metadata = createPageMetadata({
+    title: "Contato e Orçamentos | Chonnostech",
     description:
-        "Solicite uma proposta de sistema interno ou automação de processos. Fale com a Chonnostech pelo WhatsApp, e-mail ou formulário.",
-    alternates: { canonical: "/contato" },
-};
+        "Fale com a Chonnostech pelo WhatsApp, e-mail ou formulário. Conte como sua empresa trabalha e solicite uma proposta de sistema interno ou automação.",
+    path: "/contato",
+});
 
 export default function ContatoPage() {
     return <Contato headingLevel="h1" />;

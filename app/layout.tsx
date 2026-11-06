@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import PageTransition from "./components/ui/PageTransition";
+import { homeMetadata } from "./lib/metadata";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,10 +29,8 @@ export const viewport: Viewport = {
 
 // 2. Exportação do Metadata com boas práticas
 export const metadata: Metadata = {
+  ...homeMetadata,
   metadataBase: new URL(baseUrl),
-  title: "Chonnostech — Sistemas Internos e Automação de Processos",
-  description:
-    "Desenvolvimento de sistemas internos e automação de processos para empresas. Organize tarefas, conecte ferramentas e acompanhe a operação com soluções sob medida.",
   keywords: [
     "sistema interno para empresas",
     "desenvolvimento de sistemas personalizados",
@@ -48,9 +47,6 @@ export const metadata: Metadata = {
   creator: "Chonnostech",
   publisher: "Chonnostech",
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-  alternates: {
-    canonical: baseUrl,
-  },
   manifest: "/manifest.json",
   icons: {
     icon: [
@@ -64,30 +60,6 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: "black-translucent",
     title: "Chonnostech",
-  },
-  openGraph: {
-    type: "website",
-    locale: "pt_BR",
-    url: baseUrl,
-    title: "Chonnostech — Sistemas Internos e Automação de Processos",
-    description:
-      "Sistemas internos sob medida, gestão de tarefas e equipes, dashboards e automação de processos para empresas.",
-    siteName: "Chonnostech",
-    images: [
-      {
-        url: `${baseUrl}/og-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Chonnostech — Sistemas Internos e Automação de Processos",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Chonnostech — Sistemas Internos e Automação de Processos",
-    description:
-      "Sistemas internos, dashboards e automação de processos para a sua empresa.",
-    images: [`${baseUrl}/twitter-image.jpg`],
   },
 };
 

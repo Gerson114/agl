@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/metadata";
 import Link from "next/link";
 import {
     FaArrowTrendUp,
@@ -16,12 +16,12 @@ import Eyebrow from "../components/ui/Eyebrow";
 const FONT_DISPLAY = "'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Inter', sans-serif";
 
-export const metadata: Metadata = {
-    title: "Sistemas | Chonnostech",
+export const metadata = createPageMetadata({
+    title: "Sistemas Internos sob Medida | Chonnostech",
     description:
-        "Sistemas internos sob medida para organizar tarefas, equipes, dados e processos da empresa em um só lugar.",
-    alternates: { canonical: "/sistema" },
-};
+        "Centralize vendas, financeiro, tarefas e indicadores em um sistema interno sob medida. A Chonnostech desenvolve os módulos conforme os processos da sua empresa.",
+    path: "/sistema",
+});
 
 interface Modulo {
     icone: IconType;
