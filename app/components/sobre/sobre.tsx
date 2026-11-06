@@ -15,13 +15,13 @@ interface Pilar {
 const pilares: Pilar[] = [
     {
         icone: FaClock,
-        titulo: "Decisão em tempo real",
-        descricao: "Não com dado de três semanas atrás. Você abre a tela e vê o que está acontecendo na empresa agora.",
+        titulo: "Visão da operação",
+        descricao: "Reúna dados e atividades num painel atualizado para acompanhar o que acontece na empresa.",
     },
     {
         icone: FaFileInvoiceDollar,
-        titulo: "Fim da planilha",
-        descricao: "Acabou a tarde inteira fechando planilha no fim do mês. O sistema atualiza sozinho.",
+        titulo: "Menos tarefas repetidas",
+        descricao: "Conecte etapas do processo e reduza lançamentos e conferências feitos manualmente.",
     },
     {
         icone: FaSitemap,
@@ -30,8 +30,8 @@ const pilares: Pilar[] = [
     },
     {
         icone: FaChartLine,
-        titulo: "Tudo num painel só",
-        descricao: "Vendas, financeiro e equipe no mesmo lugar, sem precisar copiar número de canto nenhum.",
+        titulo: "Processos conectados",
+        descricao: "Conecte equipes, informações e ferramentas nos fluxos de trabalho da empresa.",
     },
 ];
 
@@ -45,34 +45,34 @@ export default function Sobre({ headingLevel = "h2" }: { headingLevel?: "h1" | "
                     className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight leading-tight"
                     style={{ fontFamily: FONT_DISPLAY }}
                 >
-                    Menos planilha. Mais decisão.
+                    Menos tarefa manual. Mais clareza.
                 </Heading>
                 <div className="mt-5 mx-auto w-16 h-1.5 bg-[#1D4FE0]" />
                 <p
                     className="mt-6 text-slate-600 text-lg leading-relaxed max-w-3xl mx-auto"
                     style={{ fontFamily: FONT_BODY }}
                 >
-                    O Chonnostech implementa e usa tecnologia para atender empresas:{" "}
+                    A Chonnostech desenvolve para empresas:{" "}
                     <strong className="text-black font-semibold">
                         soluções em sistemas e automações
                     </strong>{" "}
                     que otimizam a gestão do seu negócio, conectando{" "}
                     <strong className="text-black font-semibold">
-                        pessoas, processos e vendas
+                        tarefas, equipes e processos
                     </strong>{" "}
                     em um só lugar.{" "}
                     <strong className="text-black font-semibold">
-                        Sistema, site e loja online para a sua empresa.
+                        Sistemas internos e automação para a sua empresa.
                     </strong>
                 </p>
             </Reveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8 max-w-5xl mx-auto">
                 {pilares.map((pilar, index) => {
                     const Icone = pilar.icone;
                     return (
                         <Reveal key={pilar.titulo} delay={index * 90}>
-                            <div className="h-full flex flex-col gap-4 p-6 border border-slate-200 bg-white hover:border-blue-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                            <div className="h-full flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 transition-colors duration-200 hover:border-blue-300">
                                 <div className="flex items-center justify-center w-11 h-11 bg-[#1D4FE0]/10">
                                     <Icone className="text-lg text-[#1D4FE0]" />
                                 </div>

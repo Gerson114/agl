@@ -44,16 +44,16 @@ const gruposEtapas = [
             {
                 icone: FaGlobe,
                 titulo: "O que está incluso nesse valor mensal",
-                resumo: "Manutenção, vitrine e lógica nova inclusas.",
+                resumo: "Manutenção, ajustes e novas funcionalidades inclusas.",
                 conteudo:
-                    "Ficando com a gente, a mensalidade de R$ 100,00 já cobre manutenção de rotina, alterações no design da vitrine e implementação de lógica nova (novas funcionalidades e regras de negócio do sistema), sem cobranças extras por fora.",
+                    "Ficando com a gente, a mensalidade de R$ 100,00 já cobre manutenção de rotina, ajustes na interface do sistema e implementação de lógica nova (novas funcionalidades e regras de negócio do sistema), sem cobranças extras por fora.",
             },
             {
                 icone: FaKey,
                 titulo: "Não quer comprar? Você pode alugar o sistema",
                 resumo: "Mesmo valor de R$ 100/mês, só que sem comprar.",
                 conteudo:
-                    "Se preferir não comprar, dá para alugar o sistema pelo mesmo valor de R$ 100,00 por mês. Nesse plano a manutenção continua inclusa e você pode pedir alterações na vitrine, mas não tem direito a alterações de lógica (regras internas do sistema) — só quem compra o sistema tem esse direito.",
+                    "Se preferir não comprar, dá para alugar o sistema pelo mesmo valor de R$ 100,00 por mês. Nesse plano a manutenção continua inclusa e você pode pedir ajustes na interface do sistema, mas não tem direito a alterações de lógica (regras internas do sistema) — só quem compra o sistema tem esse direito.",
             },
         ],
     },

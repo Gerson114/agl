@@ -22,7 +22,7 @@ const FONT_MONO = "'JetBrains Mono', monospace";
 export const metadata: Metadata = {
     title: "Sobre | Chonnostech",
     description:
-        "O Chonnostech implementa e usa tecnologia para atender empresas: sistemas e automações que conectam pessoas, processos e vendas em um só lugar.",
+        "A Chonnostech desenvolve sistemas internos para empresas e automações de processos que conectam tarefas, equipes e informações em soluções sob medida.",
     alternates: { canonical: "/sobre" },
 };
 
@@ -73,7 +73,7 @@ const etapas: Etapa[] = [
         icone: FaCode,
         numero: "02",
         titulo: "Desenvolvimento",
-        descricao: "Construímos o sistema, site ou loja virtual sob medida, com check-ins ao longo do caminho — sem caixa-preta.",
+        descricao: "Desenvolvemos sistemas internos e automações de processos conforme as necessidades reais da sua empresa, com acompanhamento ao longo do projeto.",
     },
     {
         icone: FaTruck,

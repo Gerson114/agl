@@ -11,7 +11,7 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold">Chonnostech</h3>
                         <p className="text-sm text-white/80 mt-1">
-                            Sistema, site e loja online para a sua empresa.
+                            Sistemas internos e automação para a sua empresa.
                         </p>
                     </div>
                 </div>
@@ -20,6 +20,7 @@ export default function Footer() {
                     <Link href="/" className="text-sm text-white/80 hover:text-white">Home</Link>
                     <Link href="/sobre" className="text-sm text-white/80 hover:text-white">Sobre</Link>
                     <Link href="/sistema" className="text-sm text-white/80 hover:text-white">Sistemas</Link>
+                    <Link href="/automacoes" className="text-sm text-white/80 hover:text-white">Automações</Link>
                     <Link href="/como-funciona" className="text-sm text-white/80 hover:text-white">Como Funciona</Link>
                     <Link href="/solucoes" className="text-sm text-white/80 hover:text-white">Soluções</Link>
                     <Link href="/contato" className="text-sm text-white/80 hover:text-white">Contato</Link>

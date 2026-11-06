@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
     FaArrowTrendUp,
-    FaBoxesStacked,
+    FaGears,
     FaFileInvoice,
     FaUsers,
-    FaCartShopping,
+    FaChartLine,
     FaListCheck,
 } from "react-icons/fa6";
 import type { IconType } from "react-icons";
@@ -19,7 +19,7 @@ const FONT_BODY = "'Inter', sans-serif";
 export const metadata: Metadata = {
     title: "Sistemas | Chonnostech",
     description:
-        "Sistema de gestão sob medida: vendas, financeiro, estoque, cobrança e equipe organizados num painel só, atualizado na hora.",
+        "Sistemas internos sob medida para organizar tarefas, equipes, dados e processos da empresa em um só lugar.",
     alternates: { canonical: "/sistema" },
 };
 
@@ -41,14 +41,14 @@ const modulos: Modulo[] = [
         descricao: "Contas a pagar e a receber, fluxo de caixa e fechamento do mês num só lugar, sempre atualizado.",
     },
     {
-        icone: FaBoxesStacked,
-        titulo: "Estoque",
-        descricao: "Controle de entrada, saída e localização — para quem trabalha com produto físico.",
+        icone: FaGears,
+        titulo: "Automação de rotinas",
+        descricao: "Reduza tarefas manuais com fluxos e notificações definidos para o processo da sua empresa.",
     },
     {
         icone: FaListCheck,
-        titulo: "Cobrança",
-        descricao: "Acompanhamento de pendências e inadimplência, com lembretes automáticos para o cliente.",
+        titulo: "Tarefas e projetos",
+        descricao: "Demandas, responsáveis, prioridades e prazos organizados por etapa do processo.",
     },
     {
         icone: FaUsers,
@@ -56,9 +56,9 @@ const modulos: Modulo[] = [
         descricao: "Usuários com permissões próprias: cada pessoa vê e mexe só no que precisa.",
     },
     {
-        icone: FaCartShopping,
-        titulo: "Loja online",
-        descricao: "Catálogo e pedidos da loja virtual sincronizados com o mesmo sistema de gestão.",
+        icone: FaChartLine,
+        titulo: "Dashboards",
+        descricao: "Indicadores e relatórios da operação reunidos para acompanhar resultados e tomar decisões.",
     },
 ];
 
@@ -72,15 +72,15 @@ export default function SistemaPage() {
                         className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight leading-tight"
                         style={{ fontFamily: FONT_DISPLAY }}
                     >
-                        Um sistema, montado a partir dos módulos que a sua empresa precisa
+                        Um sistema interno montado de acordo com os processos da sua empresa
                     </h1>
                     <div className="mt-5 mx-auto w-16 h-1.5 bg-[#1D4FE0]" />
                     <p
                         className="mt-6 text-slate-600 text-lg leading-relaxed"
                         style={{ fontFamily: FONT_BODY }}
                     >
-                        Nem toda empresa precisa de tudo. Por isso cada sistema é montado sob
-                        medida, combinando só os módulos que fazem sentido para o seu processo.
+                        Desenvolvemos sistemas internos conforme a rotina da sua equipe: gestão de tarefas,
+                        dashboards, vendas, financeiro, estoque e automações, no mesmo ambiente.
                     </p>
                 </Reveal>
 
@@ -121,16 +121,14 @@ export default function SistemaPage() {
                         className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight leading-tight"
                         style={{ fontFamily: FONT_DISPLAY }}
                     >
-                        Qualquer empresa que ainda decide no achismo
+                        Mais clareza para as decisões da sua empresa
                     </h2>
                     <div className="mt-5 mx-auto w-16 h-1.5 bg-[#1D4FE0]" />
                     <p
                         className="mt-6 text-slate-600 text-lg leading-relaxed"
                         style={{ fontFamily: FONT_BODY }}
                     >
-                        Não importa o setor: se a sua empresa ainda fecha o mês na planilha, se
-                        depende de caderno ou de memória para saber o que vendeu, o que sobrou no
-                        caixa ou o que falta cobrar — o sistema resolve isso.
+                        Reúna informações que hoje estão em planilhas e conversas. Um sistema interno pode organizar tarefas, responsabilidades e etapas do trabalho, para que a equipe acompanhe a operação em um só lugar.
                     </p>
                     <Link
                         href="/contato"

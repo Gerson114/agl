@@ -1,8 +1,7 @@
 import Link from "next/link";
 import {
-    FaBuilding,
     FaLaptopCode,
-    FaCartShopping,
+    FaGears,
     FaArrowRight,
     FaHandshake,
     FaShieldHalved,
@@ -23,29 +22,29 @@ interface Destaque {
 }
 
 const destaques: Destaque[] = [
-    { icone: FaShieldHalved, texto: "Sistema 100% seu, desde o primeiro dia" },
-    { icone: FaHandshake, texto: "Atendimento direto, sem intermediários" },
-    { icone: FaHeadset, texto: "Suporte contínuo após a entrega" },
+    { icone: FaShieldHalved, texto: "Sistemas internos sob medida" },
+    { icone: FaHandshake, texto: "Automação dos seus processos" },
+    { icone: FaHeadset, texto: "Atendimento direto com quem desenvolve" },
 ];
 
 const paginas = [
     {
-        icone: FaBuilding,
-        titulo: "Sobre",
-        descricao: "Como pensamos, como trabalhamos e o que muda quando você fecha com a gente.",
-        href: "/sobre",
-    },
-    {
         icone: FaLaptopCode,
-        titulo: "Sistemas",
-        descricao: "Os módulos disponíveis e o painel administrativo rodando de verdade.",
+        titulo: "Sistemas internos",
+        descricao: "Reúna tarefas, equipes e dados da operação em um sistema feito para a rotina da sua empresa.",
         href: "/sistema",
     },
     {
-        icone: FaCartShopping,
-        titulo: "Soluções",
-        descricao: "Sistema de gestão, loja virtual e site institucional — compare as opções.",
-        href: "/solucoes",
+        icone: FaGears,
+        titulo: "Automação de processos",
+        descricao: "Conecte ferramentas e automatize etapas repetitivas conforme as regras do seu negócio.",
+        href: "/automacoes",
+    },
+    {
+        icone: FaShieldHalved,
+        titulo: "Dashboards e indicadores",
+        descricao: "Acompanhe tarefas e indicadores da operação em painéis pensados para sua equipe.",
+        href: "/sistema",
     },
 ];
 
@@ -75,27 +74,27 @@ export default function Home() {
 
             <Sobre />
 
-            <section className="w-full py-20 px-4 bg-[#F5F6FA]">
+            <section className="w-full py-20 px-4 bg-[#F8F9FC]">
                 <Reveal className="max-w-3xl mx-auto text-center mb-12">
                     <Eyebrow>Explore</Eyebrow>
                     <h2
-                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight leading-tight"
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight"
                         style={{ fontFamily: FONT_DISPLAY }}
                     >
-                        Conheça o Chonnostech por dentro
+                        Sistemas internos e automações para sua empresa
                     </h2>
                 </Reveal>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto">
                     {paginas.map((p, index) => {
                         const Icone = p.icone;
                         return (
                             <Reveal key={p.href} delay={index * 90} className="h-full">
                                 <Link
                                     href={p.href}
-                                    className="group h-full flex flex-col gap-4 p-6 border border-slate-200 bg-white hover:border-blue-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                                    className="group h-full flex flex-col gap-5 rounded-xl border border-slate-200 bg-white p-7 transition-colors duration-200 hover:border-blue-300 sm:p-8"
                                 >
-                                    <div className="flex items-center justify-center w-11 h-11 bg-[#1D4FE0]/10">
+                                    <div className="flex items-center justify-center w-12 h-12 rounded-lg rounded-lg bg-[#1D4FE0]/10">
                                         <Icone className="text-lg text-[#1D4FE0]" />
                                     </div>
                                     <h3
@@ -124,26 +123,26 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="w-full py-20 px-4 bg-[#0B1120] text-center">
+            <section className="w-full py-20 px-4 bg-[#F5F6FA] text-center">
                 <Reveal className="max-w-2xl mx-auto">
                     <h2
-                        className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight"
+                        className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight"
                         style={{ fontFamily: FONT_DISPLAY }}
                     >
-                        Pronto para ver isso rodando na sua empresa?
+                        Sua equipe pronta para trabalhar com mais clareza?
                     </h2>
                     <p
-                        className="mt-4 text-slate-300 text-base sm:text-lg leading-relaxed"
+                        className="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed"
                         style={{ fontFamily: FONT_BODY }}
                     >
-                        Fale com a gente e mostramos como fica o sistema no seu negócio.
+                        Conte como sua empresa trabalha. Vamos encontrar o sistema ou a automação que faz sentido para sua operação.
                     </p>
                     <Link
                         href="/contato"
                         className="mt-8 inline-flex items-center justify-center gap-2 bg-[#1D4FE0] hover:bg-[#1640C2] text-white font-semibold text-sm sm:text-base px-9 py-3.5 shadow-lg hover:shadow-xl transition-all duration-200"
                         style={{ fontFamily: FONT_BODY }}
                     >
-                        Falar com a gente
+                        Conversar sobre meu processo
                     </Link>
                 </Reveal>
             </section>

@@ -1,7 +1,7 @@
 {
-  "name": "Chonnostech - Sistema, Site e Loja Online para a sua Empresa",
+  "name": "Chonnostech — Sistemas internos e automação de processos",
   "short_name": "Chonnostech",
-  "description": "Sistema de gestão sob medida, sites institucionais e lojas virtuais para quem vende",
+  "description": "Sistemas internos personalizados e automação de processos para empresas.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -39,5 +39,8 @@
       "purpose": "maskable"
     }
   ],
-  "categories": ["business", "productivity"]
+  "categories": [
+    "business",
+    "productivity"
+  ]
 }

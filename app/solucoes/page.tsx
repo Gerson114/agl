@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Solucoes from "../components/solucoes/solucoes";
 
 export const metadata: Metadata = {
-    title: "Soluções | Chonnostech",
+    title: "Sistemas Internos e Automação de Processos | Chonnostech",
     description:
-        "Sistema de gestão personalizado, loja virtual e site institucional. Compare as opções e fale direto no WhatsApp.",
+        "Compare sistemas internos, gestão de tarefas, dashboards e automação de processos. Projetos sob medida para a operação da sua empresa.",
     alternates: { canonical: "/solucoes" },
 };
 

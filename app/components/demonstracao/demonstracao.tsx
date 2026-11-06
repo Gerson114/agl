@@ -8,7 +8,6 @@ import Reveal from "../ui/Reveal";
 import Eyebrow from "../ui/Eyebrow";
 import imgProdutos from "../../../public/demo/slide-produtos.webp";
 import imgEstoque from "../../../public/demo/slide-estoque.webp";
-import imgBanners from "../../../public/demo/slide-banners.webp";
 import imgCadastro from "../../../public/demo/slide-cadastro.webp";
 
 const FONT_DISPLAY = "'Plus Jakarta Sans', sans-serif";
@@ -31,21 +30,21 @@ const slides: Slide[] = [
     {
         label: "Produtos",
         img: imgProdutos,
-        titulo: "Cada produto, com preço, promoção e estoque na mesma tela",
+        titulo: "Consulte o cadastro e o estoque em uma mesma tela",
         descricao:
             "O painel mostra de cara quantas peças existem, quantas estão sem estoque e o valor total parado em estoque — sem precisar abrir planilha nenhuma.",
         pontos: [
-            "Catálogo com foto, preço e status (disponível / sem estoque)",
-            "Promoção calculada automaticamente a partir do preço antigo",
+            "Cadastro de itens com imagem, especificações e disponibilidade",
+            "Informações atualizadas conforme o movimento do estoque",
             "Tamanho, cor, tecido e localização visíveis no card",
         ],
     },
     {
         label: "Estoque",
         img: imgEstoque,
-        titulo: "Saiba exatamente onde cada peça está guardada",
+        titulo: "Acompanhe onde cada item está armazenado",
         descricao:
-            "O estoque é organizado por rua e bloco, do jeito que a loja física funciona de verdade — não é só um número solto.",
+            "A equipe consulta a localização e a quantidade de cada item diretamente no sistema, conforme a organização da operação.",
         pontos: [
             "Peças agrupadas por rua e bloco de armazenamento",
             "Transferência de local em um clique",
@@ -53,21 +52,9 @@ const slides: Slide[] = [
         ],
     },
     {
-        label: "Banners",
-        img: imgBanners,
-        titulo: "Controle o que aparece na vitrine, sem mexer em código",
-        descricao:
-            "Título, descrição, imagem, valor e link de cada banner da loja são editados por formulário — quem administra a loja não depende de programador para trocar uma promoção.",
-        pontos: [
-            "Banner pode linkar direto para um produto do catálogo",
-            "Ordem de exibição e status ativo/inativo configuráveis",
-            "Mudança aparece na loja (frontp) na hora",
-        ],
-    },
-    {
         label: "Cadastro",
         img: imgCadastro,
-        titulo: "Cadastra o produto e vê a etiqueta pronta em tempo real",
+        titulo: "Cadastre itens e consulte as informações necessárias",
         descricao:
             "Enquanto você preenche nome, preço e especificações, a pré-visualização da etiqueta ao lado atualiza sozinha — é a mesma etiqueta que vai pro produto de verdade.",
         pontos: [
@@ -105,17 +92,16 @@ export default function Demonstracao() {
                     className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight"
                     style={{ fontFamily: FONT_DISPLAY }}
                 >
-                    Isso aqui não é print de mockup, é o sistema rodando
+                    Gestão da operação, no sistema que sua equipe usa
                 </h2>
                 <div className="mt-5 mx-auto w-16 h-1.5 bg-[#1D4FE0]" />
                 <p
                     className="mt-6 text-slate-300 text-lg leading-relaxed"
                     style={{ fontFamily: FONT_BODY }}
                 >
-                    Um painel administrativo de verdade, do jeito que entregamos para os nossos
-                    clientes — neste caso, para um cliente do varejo. Cada sistema é desenhado
-                    para o processo de cada empresa, seja qual for o seu setor. Passeie pelas
-                    telas abaixo.
+                    Este exemplo real mostra um painel de gestão de estoque desenvolvido para uma empresa do varejo.
+                    O sistema pode reunir tarefas, equipe e operação conforme o processo de cada negócio.
+                    Veja como uma rotina interna pode ficar organizada.
                 </p>
             </Reveal>
 

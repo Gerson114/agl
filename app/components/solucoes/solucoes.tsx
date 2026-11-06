@@ -24,21 +24,21 @@ export default function Solucoes({ headingLevel = "h2" }: { headingLevel?: "h1" 
                         className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight leading-tight"
                         style={{ fontFamily: FONT_DISPLAY }}
                     >
-                        Qual dessas opções é a cara do seu negócio?
+                        Sistemas internos e automações para a sua empresa
                     </Heading>
                     <div className="mt-5 mx-auto w-16 h-1.5 bg-[#1D4FE0]" />
                     <p
                         className="mt-6 text-slate-600 text-lg leading-relaxed"
                         style={{ fontFamily: FONT_BODY }}
                     >
-                        Compare as opções abaixo e escolha a que mais faz sentido para você.
-                        Ao clicar, você já cai direto no WhatsApp com a opção escolhida.
+                        Conheça as soluções para organizar a operação e automatizar processos.
+                        Cada projeto tem escopo e investimento definidos conforme a sua necessidade.
                     </p>
                 </Reveal>
             </div>
 
             <div className="w-full py-16 px-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto items-stretch">
                     {servicos.map((s, index) => {
                         const Icone = s.icone;
                         const bonus = s.condicoes?.bonus;
@@ -47,7 +47,7 @@ export default function Solucoes({ headingLevel = "h2" }: { headingLevel?: "h1" 
                             <Reveal key={s.titulo} delay={index * 100} className="relative h-full">
                                 {s.badge && (
                                     <span
-                                        className="absolute -top-3 right-6 z-10 text-[10px] font-semibold uppercase tracking-wider bg-white text-[#1D4FE0] px-3 py-1 shadow-md border border-blue-100"
+                                        className="absolute -top-3 right-6 z-10 text-xs font-semibold uppercase tracking-wider bg-white text-[#1D4FE0] px-3 py-1 shadow-md border border-blue-100"
                                         style={{ fontFamily: FONT_MONO }}
                                     >
                                         {s.badge}
@@ -55,13 +55,13 @@ export default function Solucoes({ headingLevel = "h2" }: { headingLevel?: "h1" 
                                 )}
 
                                 <div
-                                    className={`group relative flex flex-col h-full overflow-hidden border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
+                                    className={`group relative flex flex-col h-full overflow-hidden rounded-2xl border transition-colors duration-200 hover:border-blue-300 ${
                                         s.destaque
                                             ? "bg-[#1D4FE0] border-[#1D4FE0] text-white shadow-xl shadow-blue-900/20"
                                             : "bg-white border-slate-200 text-slate-800 shadow-sm hover:border-blue-200"
                                     }`}
                                 >
-                                    <div className="flex flex-col gap-4 p-5 sm:p-6 flex-1">
+                                    <div className="flex flex-col gap-4 p-6 sm:p-8 flex-1">
                                         <div
                                             className={`flex items-center justify-center w-9 h-9 transition-colors duration-300 ${
                                                 s.destaque
@@ -84,7 +84,7 @@ export default function Solucoes({ headingLevel = "h2" }: { headingLevel?: "h1" 
                                                 {s.titulo}
                                             </h3>
                                             <p
-                                                className={`text-xs leading-relaxed ${
+                                                className={`text-sm leading-relaxed ${
                                                     s.destaque ? "text-white/90" : "text-slate-600"
                                                 }`}
                                                 style={{ fontFamily: FONT_BODY }}
@@ -100,7 +100,7 @@ export default function Solucoes({ headingLevel = "h2" }: { headingLevel?: "h1" 
                                                 }`}
                                             >
                                                 <p
-                                                    className={`text-[11px] font-semibold ${
+                                                    className={`text-xs font-semibold ${
                                                         s.destaque ? "text-white" : "text-slate-800"
                                                     }`}
                                                     style={{ fontFamily: FONT_BODY }}
@@ -118,7 +118,7 @@ export default function Solucoes({ headingLevel = "h2" }: { headingLevel?: "h1" 
                                                                     }`}
                                                                 />
                                                                 <span
-                                                                    className={`text-[11px] ${
+                                                                    className={`text-xs ${
                                                                         s.destaque ? "text-blue-50" : "text-slate-700"
                                                                     }`}
                                                                     style={{ fontFamily: FONT_BODY }}
@@ -138,7 +138,7 @@ export default function Solucoes({ headingLevel = "h2" }: { headingLevel?: "h1" 
                                             }`}
                                         >
                                             <span
-                                                className={`text-[10px] uppercase tracking-wider block mb-0.5 font-semibold ${
+                                                className={`text-xs uppercase tracking-wider block mb-0.5 font-semibold ${
                                                     s.destaque ? "text-blue-100" : "text-slate-400"
                                                 }`}
                                                 style={{ fontFamily: FONT_MONO }}
@@ -176,7 +176,7 @@ export default function Solucoes({ headingLevel = "h2" }: { headingLevel?: "h1" 
                                             style={{ fontFamily: FONT_BODY }}
                                         >
                                             <FaWhatsapp className="text-base" />
-                                            Escolher esta opção
+                                            Conversar sobre esta solução
                                         </a>
                                     </div>
                                 </div>

@@ -1,20 +1,21 @@
 {
   "$schema": "https://json-ld.org/schema",
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
   "name": "Chonnostech",
-  "description": "Soluções em sistemas e automações para otimizar a gestão da sua empresa: estoque, vendas, financeiro e cobrança num só lugar, além de sites e lojas virtuais.",
-  "url": "https://chonnostech.com.br",
-  "logo": "https://chonnostech.com.br/logo.png",
-  "image": "https://chonnostech.com.br/og-image.jpg",
+  "description": "Sistemas internos personalizados e automação de processos para empresas. Organize tarefas e equipes, acompanhe indicadores e conecte as ferramentas da sua operação.",
+  "url": "https://chonnostech.com",
+  "logo": "https://chonnostech.com/logo.png",
+  "image": "https://chonnostech.com/og-image.jpg",
   "telephone": "+55-81-98358-3549",
   "email": "contato@chonnostech.com.br",
-  "priceRange": "R$ 100 - R$ 5000+",
   "areaServed": {
     "@type": "Country",
     "name": "BR"
   },
-  "sameAs": ["https://www.instagram.com/chonnostech/"],
+  "sameAs": [
+    "https://www.instagram.com/chonnostech/"
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "BR",
@@ -26,13 +27,8 @@
     "contactType": "Customer Service",
     "telephone": "+55-81-98358-3549",
     "email": "contato@chonnostech.com.br",
-    "availableLanguage": ["pt-BR"]
-  },
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "BRL",
-    "lowPrice": "100",
-    "highPrice": "5000",
-    "offerCount": "4"
+    "availableLanguage": [
+      "pt-BR"
+    ]
   }
 }

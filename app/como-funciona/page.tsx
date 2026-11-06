@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Funciona from "../components/funciona/page";
+import Funciona from "../components/funciona/funciona";
 
 export const metadata: Metadata = {
     title: "Como Funciona | Chonnostech",
     description:
-        "Entenda o modelo: o sistema é seu desde o primeiro dia, com período grátis de hospedagem e manutenção, e mensalidade acessível depois.",
+        "Entenda as etapas para criar seu sistema interno ou automatizar processos: diagnóstico, escopo, desenvolvimento, implantação e suporte.",
     alternates: { canonical: "/como-funciona" },
 };
 

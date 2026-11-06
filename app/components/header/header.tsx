@@ -26,6 +26,7 @@ const navLinks = [
     { label: "Home", href: "/" },
     { label: "Sobre", href: "/sobre" },
     { label: "Sistemas", href: "/sistema" },
+    { label: "Automações", href: "/automacoes" },
     { label: "Soluções", href: "/solucoes" },
     { label: "Contato", href: "/contato" },
 ];

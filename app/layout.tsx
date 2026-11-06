@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const baseUrl = "https://chonnostech.com.br";
+const baseUrl = "https://chonnostech.com";
 
 // 1. Exportação isolada do Viewport (Exigência do Next.js App Router)
 export const viewport: Viewport = {
@@ -29,25 +29,20 @@ export const viewport: Viewport = {
 // 2. Exportação do Metadata com boas práticas
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "Chonnostech — Sistema, Site e Loja Online para a sua Empresa",
+  title: "Chonnostech — Sistemas Internos e Automação de Processos",
   description:
-    "Sistema de gestão sob medida (vendas, financeiro, estoque e cobrança), sites institucionais e lojas virtuais para empresas de qualquer setor. Sua empresa, num lugar só.",
+    "Desenvolvimento de sistemas internos e automação de processos para empresas. Organize tarefas, conecte ferramentas e acompanhe a operação com soluções sob medida.",
   keywords: [
-    "sistema para empresa",
-    "sistema de gestão empresarial",
-    "software sob medida",
-    "automação de processos",
-    "gestão empresarial",
-    "painel administrativo personalizado",
-    "controle de estoque online",
-    "sistema de vendas",
-    "loja virtual",
-    "criar loja online",
-    "e-commerce sob medida",
-    "site institucional",
-    "dashboard para empresa",
-    "sistema de gestão para empresas",
-    "software para pequenas empresas",
+    "sistema interno para empresas",
+    "desenvolvimento de sistemas personalizados",
+    "automação de processos empresariais",
+    "gestão de tarefas para equipes",
+    "dashboard empresarial",
+    "integração de sistemas",
+    "software de gestão sob medida",
+    "automação de tarefas repetitivas",
+    "sistemas de gestão empresarial",
+    "digitalização de processos empresariais",
   ],
   authors: [{ name: "Chonnostech" }],
   creator: "Chonnostech",
@@ -74,24 +69,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: baseUrl,
-    title: "Chonnostech — Sistema, Site e Loja Online para a sua Empresa",
+    title: "Chonnostech — Sistemas Internos e Automação de Processos",
     description:
-      "Vendas, financeiro e estoque num painel só, atualizado na hora. Sistema de gestão sob medida, sites e lojas virtuais para empresas de qualquer setor.",
+      "Sistemas internos sob medida, gestão de tarefas e equipes, dashboards e automação de processos para empresas.",
     siteName: "Chonnostech",
     images: [
       {
         url: `${baseUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "Chonnostech - Sistema, Site e Loja Online para a sua Empresa",
+        alt: "Chonnostech — Sistemas Internos e Automação de Processos",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chonnostech — Sistema, Site e Loja Online para a sua Empresa",
+    title: "Chonnostech — Sistemas Internos e Automação de Processos",
     description:
-      "Vendas, financeiro e estoque num painel só, atualizado na hora. Sistema de gestão sob medida para a sua empresa.",
+      "Sistemas internos, dashboards e automação de processos para a sua empresa.",
     images: [`${baseUrl}/twitter-image.jpg`],
   },
 };
@@ -128,12 +123,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": "ProfessionalService",
               name: "Chonnostech",
               url: baseUrl,
               image: `${baseUrl}/logo.png`,
               description:
-                "Soluções em sistemas e automações para otimizar a gestão da sua empresa: estoque, vendas, financeiro e cobrança num só lugar, além de sites e lojas virtuais.",
+                "Desenvolvimento de sistemas internos e automação de processos para empresas, com gestão de tarefas, dashboards e integrações sob medida.",
               address: {
                 "@type": "PostalAddress",
                 addressCountry: "BR",
@@ -147,7 +142,6 @@ export default function RootLayout({
                 "@type": "Country",
                 name: "BR",
               },
-              priceRange: "R$ 100 - R$ 5000+",
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "Sales",
@@ -157,57 +151,12 @@ export default function RootLayout({
               },
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
-                name: "Serviços Chonnostech",
+                name: "Sistemas internos e automação de processos",
                 itemListElement: [
-                  {
-                    "@type": "Offer",
-                    priceCurrency: "BRL",
-                    priceSpecification: {
-                      "@type": "PriceSpecification",
-                      minPrice: 100,
-                      maxPrice: 5000,
-                      priceCurrency: "BRL",
-                    },
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Sistema Personalizado (Dashboard)",
-                      description:
-                        "Vendas, financeiro, estoque e cobrança num painel só, sob medida para o processo da sua empresa. A partir de R$ 100/mês alugando o sistema.",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    price: "500",
-                    priceCurrency: "BRL",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Landing Page de Alta Conversão",
-                      description:
-                        "Página única ultra-otimizada para transformar visitantes em clientes, ideal para campanhas de tráfego pago.",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    price: "1200",
-                    priceCurrency: "BRL",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Loja Virtual (Loja Online)",
-                      description:
-                        "Loja virtual com catálogo, carrinho e pagamento integrados ao sistema de estoque.",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    price: "500",
-                    priceCurrency: "BRL",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Site Institucional",
-                      description:
-                        "Presença profissional na internet para passar confiança e reunir os canais de contato da empresa.",
-                    },
-                  },
+                  { "@type": "Service", name: "Sistema interno sob medida", description: "Sistemas internos personalizados para organizar as rotinas e informações da empresa." },
+                  { "@type": "Service", name: "Automação de processos", description: "Mapeamento e automação de processos empresariais e integração entre ferramentas." },
+                  { "@type": "Service", name: "Gestão de tarefas e equipes", description: "Sistemas de tarefas, projetos, prazos e equipes feitos sob medida." },
+                  { "@type": "Service", name: "Dashboards e indicadores", description: "Painéis de gestão com indicadores da operação e do negócio." },
                 ],
               },
             }),

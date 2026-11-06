@@ -4,7 +4,7 @@ import Contato from "../components/contato/contato";
 export const metadata: Metadata = {
     title: "Contato | Chonnostech",
     description:
-        "Fale com o Chonnostech pelo WhatsApp, e-mail ou formulário. Respondemos em até 1 dia útil.",
+        "Solicite uma proposta de sistema interno ou automação de processos. Fale com a Chonnostech pelo WhatsApp, e-mail ou formulário.",
     alternates: { canonical: "/contato" },
 };
 

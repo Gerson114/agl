@@ -1,18 +1,18 @@
-import { FaLaptopCode, FaGlobe, FaCartShopping } from "react-icons/fa6";
+import { FaLaptopCode, FaListCheck, FaGears } from "react-icons/fa6";
 
 const FONT_MONO = "'JetBrains Mono', monospace";
 
 const nos = [
     { icone: FaLaptopCode, label: "Sistema", cor: "#1D4FE0", pos: "top-0 left-1/2 -translate-x-1/2" },
-    { icone: FaGlobe, label: "Site", cor: "#F2853D", pos: "bottom-4 left-0" },
-    { icone: FaCartShopping, label: "Loja Online", cor: "#34D399", pos: "bottom-4 right-0" },
+    { icone: FaListCheck, label: "Tarefas", cor: "#F2853D", pos: "bottom-4 left-0" },
+    { icone: FaGears, label: "Automações", cor: "#34D399", pos: "bottom-4 right-0" },
 ];
 
 export default function HeroIllustration() {
     return (
         <div
             role="img"
-            aria-label="Ilustração: sistema, site e loja online conectados em torno da tecnologia da sua empresa"
+            aria-label="Ilustração animada: sistemas internos, gestão de tarefas e automações conectados à sua empresa"
             className="relative w-full aspect-square max-w-125 mx-auto"
         >
             {/* brilho de fundo */}
@@ -91,7 +91,7 @@ export default function HeroIllustration() {
                 </span>
             </div>
 
-            {/* nós orbitando: Sistema / Site / Loja Online */}
+            {/* Módulos conectados à operação da empresa */}
             {nos.map((no) => {
                 const Icone = no.icone;
                 return (
